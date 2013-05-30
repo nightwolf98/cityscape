@@ -7,7 +7,7 @@ import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.Ev
 import java.util.List;
 import java.util.Random;
 
-import minecraft.phoenix.cityscape.space.CivilizationSpace;
+import minecraft.phoenix.cityscape.space.block.ModBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -28,6 +28,17 @@ import net.minecraftforge.event.Event.Result;
 import net.minecraftforge.event.terraingen.ChunkProviderEvent;
 import net.minecraftforge.event.terraingen.PopulateChunkEvent;
 import net.minecraftforge.event.terraingen.TerrainGen;
+
+/**
+ * 21 Century Mod
+ * 
+ * ChunkProviderMoon
+ * 
+ * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * @author nightwolf98
+ * @author Martijn
+ *
+ */
 
 public class ChunkProviderMoon implements IChunkProvider
 {
@@ -164,7 +175,7 @@ public class ChunkProviderMoon implements IChunkProvider
                             {
                                 if ((var47 += var49) > 0.0D)
                                 {
-                                    par3ArrayOfByte[var43 += var44] = (byte)CivilizationSpace.moonrock.blockID;
+                                    par3ArrayOfByte[var43 += var44] = (byte)ModBlock.moonrock.blockID;
                                 }
                                 else if (var12 * 8 + var31 < var6)
                                 {
@@ -230,14 +241,14 @@ public class ChunkProviderMoon implements IChunkProvider
                         {
                             var13 = -1;
                         }
-                        else if (var18 == CivilizationSpace.moonrock.blockID)
+                        else if (var18 == ModBlock.moonrock.blockID)
                         {
                             if (var13 == -1)
                             {
                                 if (var12 <= 0)
                                 {
                                     var14 = 0;
-                                    var15 = (byte)CivilizationSpace.moonrock.blockID;
+                                    var15 = (byte)ModBlock.moonrock.blockID;
                                 }
                                 else if (var16 >= var5 - 4 && var16 <= var5 + 1)
                                 {
@@ -273,10 +284,10 @@ public class ChunkProviderMoon implements IChunkProvider
                                 --var13;
                                 par3ArrayOfByte[var17] = var15;
 
-                                if (var13 == 0 && var15 == CivilizationSpace.moonrock.blockID)
+                                if (var13 == 0 && var15 == ModBlock.moonrock.blockID)
                                 {
                                     var13 = this.rand.nextInt(4);
-                                    var15 = (byte)CivilizationSpace.moonrock.blockID;
+                                    var15 = (byte)ModBlock.moonrock.blockID;
                                 }
                             }
                         }

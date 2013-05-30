@@ -1,18 +1,30 @@
 package minecraft.phoenix.cityscape.space.moon;
 
 import minecraft.phoenix.cityscape.space.CivilizationSpace;
+import minecraft.phoenix.cityscape.space.lib.Reference;
 import minecraft.phoenix.cityscape.space.util.NullCloudRenderer;
 import minecraft.phoenix.cityscape.space.util.SkyRendererUtil;
 import net.minecraft.world.WorldProvider;
 import net.minecraft.world.biome.WorldChunkManagerHell;
 import net.minecraft.world.chunk.IChunkProvider;
 
-public class WorldProviderMoon extends WorldProvider
-{
-	public void registerWorldChunkManager()
-	{
+/**
+ * 21 Century Mod
+ * 
+ * WorldProviderMoon
+ * 
+ * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * @author nightwolf98
+ * @author Martijn
+ *
+ */
+
+public class WorldProviderMoon extends WorldProvider{
+	
+	public void registerWorldChunkManager()	{
+		
 		this.worldChunkMgr = new WorldChunkManagerHell(CivilizationSpace.moonBiome, 0.8F, 0.1F);
-		this.dimensionId = CivilizationSpace.moon;
+		this.dimensionId = Reference.moonID;
 		this.setCloudRenderer(new NullCloudRenderer());
 		this.setSkyRenderer(new SkyRendererUtil(0));
 	}

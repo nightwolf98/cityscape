@@ -14,6 +14,17 @@ import net.minecraft.world.PortalPosition;
 import net.minecraft.world.Teleporter;
 import net.minecraft.world.WorldServer;
 
+/**
+ * 21 Century Mod
+ * 
+ * NoPortalTeleporter
+ * 
+ * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * @author nightwolf98
+ * @author Martijn
+ *
+ */
+
 public class NoPortalTeleporter extends Teleporter
 {
 	private final WorldServer worldServerInstance;
