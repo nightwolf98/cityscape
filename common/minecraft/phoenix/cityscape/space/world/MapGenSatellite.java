@@ -7,6 +7,17 @@ import net.minecraft.world.ChunkPosition;
 import net.minecraft.world.World;
 import net.minecraft.world.gen.feature.WorldGenerator;
 
+/**
+ * 21 Century Mod
+ * 
+ * MapGenSatellite
+ * 
+ * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * @author nightwolf98
+ * @author Martijn
+ *
+ */
+
 public class MapGenSatellite extends WorldGenerator
 {
 	private ChunkPosition location;

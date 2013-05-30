@@ -1,6 +1,6 @@
 package minecraft.phoenix.cityscape.space.item;
 
-import minecraft.phoenix.cityscape.space.CivilizationSpace;
+import minecraft.phoenix.cityscape.space.core.proxy.CommonProxyCivilization;
 import net.minecraft.item.Item;
 import net.minecraft.src.ModLoader;
 
@@ -17,10 +17,9 @@ public class ModItem{
      */
     
     public static void init(){
-    	
-	SpaceHelmet = new ItemSpaceHelmet(1000, CivilizationSpace.EnumArmorMaterialSpace, ModLoader.addArmor("spacesuit"), 0);
-    SpaceChest = new ItemSpaceChest(1001, CivilizationSpace.EnumArmorMaterialSpace, ModLoader.addArmor("spacesuit"), 1);
-    SpaceLegs = new ItemSpaceLegs(1002, CivilizationSpace.EnumArmorMaterialSpace, ModLoader.addArmor("spacesuit"), 2);
-    SpaceBoots = new ItemSpaceBoots(1003, CivilizationSpace.EnumArmorMaterialSpace, ModLoader.addArmor("spacesuit"), 3);
+	SpaceHelmet = new ItemSpaceHelmet(1000, CommonProxyCivilization.EnumArmorMaterialSpace, ModLoader.addArmor("spacesuit"), 0);
+    SpaceChest = new ItemSpaceChest(1001, CommonProxyCivilization.EnumArmorMaterialSpace, ModLoader.addArmor("spacesuit"), 1);
+    SpaceLegs = new ItemSpaceLegs(1002, CommonProxyCivilization.EnumArmorMaterialSpace, ModLoader.addArmor("spacesuit"), 2);
+    SpaceBoots = new ItemSpaceBoots(1003, CommonProxyCivilization.EnumArmorMaterialSpace, ModLoader.addArmor("spacesuit"), 3);
     }
 }

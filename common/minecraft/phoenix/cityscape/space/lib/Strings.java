@@ -14,11 +14,12 @@ package minecraft.phoenix.cityscape.space.lib;
 public class Strings {
 
 	//All strings used in the mod
-	public static final String ITEM_SPACEBOOTS = "spaceBoots";
-	public static final String ITEM_SPACEHELMET = "spaceHelmet";
-	public static final String ITEM_SPACECHEST = "spaceChest";
-	public static final String ITEM_SPACELEGS = "spaceLegs";
-	public static final String BLOCK_MOONROCK = "moonRock";
-	public static final String BLOCK_VECBLOCK = "vecBlock";
-	public static final String BIOME_NAME = "space";
+	public static final String ITEM_SPACEBOOTS 	= "spaceBoots";
+	public static final String ITEM_SPACEHELMET	= "spaceHelmet";
+	public static final String ITEM_SPACECHEST 	= "spaceChest";
+	public static final String ITEM_SPACELEGS 	= "spaceLegs";
+	public static final String BLOCK_MOONROCK 	= "moonRock";
+	public static final String BLOCK_VECBLOCK 	= "vecBlock";
+	public static final String BIOME_NAME 		= "space";
+	public static final String TAB_SPACE_NAME 	= "21st Century: Space";
 }

@@ -1,6 +1,6 @@
 package minecraft.phoenix.cityscape.space.item;
 
-import minecraft.phoenix.cityscape.space.CivilizationSpace;
+import minecraft.phoenix.cityscape.space.core.proxy.CommonProxyCivilization;
 import minecraft.phoenix.cityscape.space.lib.Strings;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
@@ -21,7 +21,7 @@ public class ItemSpaceLegs extends ItemArmor{
 	public ItemSpaceLegs(int par1, EnumArmorMaterial par2EnumArmorMaterial, int par3, int par4){
 		
 		super(par1, par2EnumArmorMaterial, par3, par4);
-		this.setCreativeTab(CivilizationSpace.tabSpace);
+		this.setCreativeTab(CommonProxyCivilization.tabSpace);
 		this.setUnlocalizedName(Strings.ITEM_SPACELEGS);
 	}
 }

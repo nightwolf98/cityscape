@@ -12,6 +12,17 @@ import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
 
+/**
+ * 21 Century Mod
+ * 
+ * ChunkProviderSpace
+ * 
+ * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * @author nightwolf98
+ * @author Martijn
+ *
+ */
+
 public class ChunkProviderSpace implements IChunkProvider
 {
     /** Reference to the World object. */
@@ -146,8 +157,7 @@ public class ChunkProviderSpace implements IChunkProvider
     /**
      * Returns the location of the closest structure of the specified type. If not found returns null.
      */
-    public ChunkPosition findClosestStructure(World world, String struct, int x, int y, int z)
-    {
+    public ChunkPosition findClosestStructure(World world, String struct, int x, int y, int z){
     	satellite solarbody = MapGenSatellite.satellite.valueOf(struct);
     	switch(solarbody)
     	{
@@ -175,16 +185,14 @@ public class ChunkProviderSpace implements IChunkProvider
         return null;
     }
 
-    public int getLoadedChunkCount()
-    {
+    public int getLoadedChunkCount(){
         return 0;
     }
 
     public void recreateStructures(int par1, int par2){}
 
 	@Override
-	public boolean unloadQueuedChunks()
-	{
+	public boolean unloadQueuedChunks(){
 		return false;
 	}
 

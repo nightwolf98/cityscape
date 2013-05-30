@@ -10,11 +10,21 @@ import net.minecraft.world.chunk.IChunkProvider;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 
-public class WorldProviderSpace extends WorldProvider
-{
+/**
+ * 21 Century Mod
+ * 
+ * WorldProviderSpace
+ * 
+ * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * @author nightwolf98
+ * @author Martijn
+ *
+ */
 
-	public void registerWorldChunkManager()
-	{
+public class WorldProviderSpace extends WorldProvider{
+
+	public void registerWorldChunkManager(){
+		
 		this.worldChunkMgr = new WorldChunkManagerHell(Space.spaceBiome, 0.8F, 0.1F);
 		this.dimensionId = Space.space;
 		this.setSkyRenderer(new SkyRendererUtil(0));

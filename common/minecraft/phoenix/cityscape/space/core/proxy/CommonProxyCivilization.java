@@ -1,10 +1,15 @@
 package minecraft.phoenix.cityscape.space.core.proxy;
 
-import minecraft.phoenix.cityscape.space.CivilizationSpace;
-
+import minecraft.phoenix.cityscape.space.creativeTabs.TabSpace;
 import minecraft.phoenix.cityscape.space.lib.Reference;
+import minecraft.phoenix.cityscape.space.lib.Strings;
+import minecraft.phoenix.cityscape.space.moon.BiomeGenMoon;
 import minecraft.phoenix.cityscape.space.moon.WorldProviderMoon;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.EnumArmorMaterial;
+import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
+import net.minecraftforge.common.EnumHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 /**
@@ -20,15 +25,21 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class CommonProxyCivilization {
 
+	 public static BiomeGenBase moonBiome;
+	 public static EnumArmorMaterial EnumArmorMaterialSpace;
+	 public static CreativeTabs tabSpace;
+	 
 	/**
 	 * Registers things which don't have a specific place.
 	 */
 	
 	public void registerThings(){
 		
-        DimensionManager.registerProviderType(Reference.moonID, WorldProviderMoon.class, false);
+		DimensionManager.registerProviderType(Reference.moonID, WorldProviderMoon.class, false);
         DimensionManager.registerDimension(Reference.moonID, Reference.moonID);
         
-        GameRegistry.addBiome(CivilizationSpace.moonBiome);
+        GameRegistry.addBiome(moonBiome);
+        
+        
 	}
 }

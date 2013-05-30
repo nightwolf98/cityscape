@@ -1,5 +1,9 @@
 package minecraft.phoenix.cityscape.space;
 
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.EnumArmorMaterial;
+import net.minecraft.world.biome.BiomeGenBase;
+import net.minecraftforge.common.EnumHelper;
 import minecraft.phoenix.cityscape.space.block.ModBlock;
 import minecraft.phoenix.cityscape.space.core.handler.CustomCommandHandler;
 import minecraft.phoenix.cityscape.space.core.handler.LocalizationHandler;
@@ -7,12 +11,9 @@ import minecraft.phoenix.cityscape.space.core.proxy.CommonProxyCivilization;
 import minecraft.phoenix.cityscape.space.creativeTabs.TabSpace;
 import minecraft.phoenix.cityscape.space.item.ModItem;
 import minecraft.phoenix.cityscape.space.lib.Reference;
+import minecraft.phoenix.cityscape.space.lib.Strings;
 import minecraft.phoenix.cityscape.space.moon.BiomeGenMoon;
 import minecraft.phoenix.cityscape.space.world.Space;
-import net.minecraft.creativetab.CreativeTabs;
-import net.minecraft.item.EnumArmorMaterial;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.common.EnumHelper;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.PreInit;
@@ -53,9 +54,9 @@ public class CivilizationSpace{
 			serverSide = Reference.CommonProxy)
 	public static CommonProxyCivilization proxy;
 
-    public static final BiomeGenBase moonBiome = (new BiomeGenMoon(30)).setColor(16421912).setBiomeName("Moon").setDisableRain().setTemperatureRainfall(2.0F, 0.0F).setMinMaxHeight(0.1F, 0.2F);
-    public static EnumArmorMaterial EnumArmorMaterialSpace = EnumHelper.addArmorMaterial("Space Armor", 35, new int[] {4,9,7,6}, 15);
-    public static CreativeTabs tabSpace = new TabSpace(CreativeTabs.getNextID(), "21st Century: Space"); //XXX Strings Tabspace
+	 public static BiomeGenBase moonBiome = (new BiomeGenMoon(30)).setColor(16421912).setBiomeName("Moon").setDisableRain().setTemperatureRainfall(2.0F, 0.0F).setMinMaxHeight(0.1F, 0.2F);
+	 public static EnumArmorMaterial EnumArmorMaterialSpace = EnumHelper.addArmorMaterial("Space Armor", 35, new int[] {4,9,7,6}, 15);
+	 public static CreativeTabs tabSpace = new TabSpace(CreativeTabs.getNextID(), Strings.TAB_SPACE_NAME); 
 			 
 	@PreInit
 	public void load(FMLPreInitializationEvent event)
@@ -63,14 +64,14 @@ public class CivilizationSpace{
 		//Loading language files
 		LocalizationHandler.loadLanguages();
 		
+		//Registering things which dont have to be in the Main Mod file
+		proxy.registerThings();
+		
 		//Initializing the Mod Items
 	    ModItem.init();   
 	    
 	    //Initializing the Mod Blocks
 	    ModBlock.init();
-	    
-		//Registering things which dont have to be in the Main Mod file
-		proxy.registerThings();
         
 		//Please put this in the proxy ;)
       	// PlayerAPI.register(Reference.modid, EntityPlayerSpace.class);
