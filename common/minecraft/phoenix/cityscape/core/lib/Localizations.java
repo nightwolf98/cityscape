@@ -1,4 +1,4 @@
-package minecraft.phoenix.cityscape.space.lib;
+package minecraft.phoenix.cityscape.core.lib;
 
 /**
  * 21 Century Mod
@@ -8,6 +8,7 @@ package minecraft.phoenix.cityscape.space.lib;
  * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * @author nightwolf98
  * @author Martijn
+ * @author jack9515
  *
  */
 

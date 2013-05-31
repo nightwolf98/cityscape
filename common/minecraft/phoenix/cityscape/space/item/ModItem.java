@@ -1,6 +1,6 @@
 package minecraft.phoenix.cityscape.space.item;
 
-import minecraft.phoenix.cityscape.space.core.proxy.CommonProxyCivilization;
+import minecraft.phoenix.cityscape.core.proxy.CommonProxyCivilization;
 import net.minecraft.item.Item;
 import net.minecraft.src.ModLoader;
 

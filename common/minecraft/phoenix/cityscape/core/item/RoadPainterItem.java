@@ -1,6 +1,5 @@
-package nightWolf.cityscape;
+package minecraft.phoenix.cityscape.core.item;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
 public class RoadPainterItem extends Item {
@@ -11,10 +10,4 @@ public class RoadPainterItem extends Item {
                 
              
         }
-        
-        @Override
-        public String getTextureFile () {
-                return CommonProxy.ITEMS_PNG;
-        }
-
 }

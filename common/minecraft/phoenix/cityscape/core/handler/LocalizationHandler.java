@@ -1,7 +1,7 @@
-package minecraft.phoenix.cityscape.space.core.handler;
+package minecraft.phoenix.cityscape.core.handler;
 
-import minecraft.phoenix.cityscape.space.core.helper.LocalizationHelper;
-import minecraft.phoenix.cityscape.space.lib.Localizations;
+import minecraft.phoenix.cityscape.core.helper.LocalizationHelper;
+import minecraft.phoenix.cityscape.core.lib.Localizations;
 import cpw.mods.fml.common.registry.LanguageRegistry;
 
 /**
@@ -12,6 +12,7 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
  * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * @author nightwolf98
  * @author Martijn
+ * @author jack9515
  *
  */
 

@@ -1,4 +1,4 @@
-package minecraft.phoenix.cityscape.space.lib;
+package minecraft.phoenix.cityscape.core.lib;
 
 import net.minecraftforge.common.DimensionManager;
 
@@ -10,6 +10,7 @@ import net.minecraftforge.common.DimensionManager;
  * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * @author nightwolf98
  * @author Martijn
+ * @author jack9515
  *
  */
 
@@ -19,8 +20,8 @@ public class Reference {
 	public static final String modid 			= "21st_Century_Mod";
 	public static final String name 			= "21st Century Mod";
 	public static final String version 			= "0.1a";
-	public static final String ClientProxy		= "minecraft.phoenix.cityscape.space.core.proxy.ClientProxyCivilization";
-	public static final String CommonProxy		= "minecraft.phoenix.cityscape.space.core.proxy.CommonProxyCivilization";
+	public static final String ClientProxy		= "minecraft.phoenix.cityscape.core.proxy.ClientProxyCivilization";
+	public static final String CommonProxy		= "minecraft.phoenix.cityscape.core.proxy.CommonProxyCivilization";
 	public static final String Language_location= "/mods/TwentyFirst_Century_Mod/lang/";
 	public static int moonID 					= DimensionManager.getNextFreeDimId();
 }

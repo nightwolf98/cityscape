@@ -1,4 +1,4 @@
-package minecraft.phoenix.cityscape.space.command;
+package minecraft.phoenix.cityscape.core.command;
 
 import java.util.ArrayList;
 import java.util.HashMap;

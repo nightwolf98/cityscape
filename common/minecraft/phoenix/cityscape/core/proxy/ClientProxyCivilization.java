@@ -1,4 +1,4 @@
-package minecraft.phoenix.cityscape.space.core.proxy;
+package minecraft.phoenix.cityscape.core.proxy;
 
 /**
  * 21 Century Mod
@@ -8,6 +8,7 @@ package minecraft.phoenix.cityscape.space.core.proxy;
  * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * @author nightwolf98
  * @author Martijn
+ * @author jack9515
  *
  */
 

@@ -1,7 +1,7 @@
 package minecraft.phoenix.cityscape.space.block;
 
-import minecraft.phoenix.cityscape.space.core.proxy.CommonProxyCivilization;
-import minecraft.phoenix.cityscape.space.lib.Strings;
+import minecraft.phoenix.cityscape.core.proxy.CommonProxyCivilization;
+import minecraft.phoenix.cityscape.core.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
  

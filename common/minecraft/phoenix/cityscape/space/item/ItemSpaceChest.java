@@ -1,7 +1,7 @@
 package minecraft.phoenix.cityscape.space.item;
 
-import minecraft.phoenix.cityscape.space.core.proxy.CommonProxyCivilization;
-import minecraft.phoenix.cityscape.space.lib.Strings;
+import minecraft.phoenix.cityscape.core.proxy.CommonProxyCivilization;
+import minecraft.phoenix.cityscape.core.lib.Strings;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.item.ItemArmor;
 

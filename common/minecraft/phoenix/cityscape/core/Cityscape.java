@@ -1,5 +1,6 @@
-package nightWolf.cityscape;
+package minecraft.phoenix.cityscape.core;
 
+import minecraft.phoenix.cityscape.core.proxy.*;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.creativetab.CreativeTabs;
@@ -22,54 +23,6 @@ import cpw.mods.fml.common.registry.LanguageRegistry;
 @NetworkMod(clientSideRequired=true, serverSideRequired=false)
 public class Cityscape {
 		
-		//ASPHALT BLOCKS
-		public final static Block asphalt = new Asphalt(500, Material.ground)
-		.setHardness(0.5F).setStepSound(Block.soundGravelFootstep)
-		.setBlockName("asphalt").setCreativeTab(CreativeTabs.tabBlock);
-		
-		public final static Block asphalt_DYH = new Asphalt_DYH(501, Material.ground)
-		.setHardness(0.5F).setStepSound(Block.soundGravelFootstep)
-		.setBlockName("Double Yellow line").setCreativeTab(CreativeTabs.tabBlock);
-		
-		public final static Block asphalt_DYV = new Asphalt_DYV(502, Material.ground)
-		.setHardness(0.5F).setStepSound(Block.soundGravelFootstep)
-		.setBlockName("Double Yellow line").setCreativeTab(CreativeTabs.tabBlock);
-		
-		public final static Block asphalt_SWV = new Asphalt_SWV(503, Material.ground)
-		.setHardness(0.5F).setStepSound(Block.soundGravelFootstep)
-		.setBlockName("Middle White Line").setCreativeTab(CreativeTabs.tabBlock);
-		
-		public final static Block asphalt_SWH = new Asphalt_SWH(504, Material.ground)
-		.setHardness(0.5F).setStepSound(Block.soundGravelFootstep)
-		.setBlockName("Middle White Line").setCreativeTab(CreativeTabs.tabBlock);
-		
-		public final static Block asphalt_SWB = new Asphalt_SWB(505, Material.ground)
-		.setHardness(0.5F).setStepSound(Block.soundGravelFootstep)
-		.setBlockName("Single White Line").setCreativeTab(CreativeTabs.tabBlock);
-		
-		public final static Block asphalt_SWL = new Asphalt_SWL(506, Material.ground)
-		.setHardness(0.5F).setStepSound(Block.soundGravelFootstep)
-		.setBlockName("Single White Line").setCreativeTab(CreativeTabs.tabBlock);
-		
-		public final static Block asphalt_SWR = new Asphalt_SWR(507, Material.ground)
-		.setHardness(0.5F).setStepSound(Block.soundGravelFootstep)
-		.setBlockName("Single White Line").setCreativeTab(CreativeTabs.tabBlock);
-		
-		public final static Block asphalt_SWT = new Asphalt_SWT(508, Material.ground)
-		.setHardness(0.5F).setStepSound(Block.soundGravelFootstep)
-		.setBlockName("Single White Line").setCreativeTab(CreativeTabs.tabBlock);
-		
-		//STEEl
-		public final static Block steelBlock = new SteelBlock(511, Material.rock)
-		.setHardness(2.5F).setStepSound(Block.soundGravelFootstep)
-		.setBlockName("Steel").setCreativeTab(CreativeTabs.tabBlock);
-		
-		//GENERATOR
-		public final static Block generator = new Generator(514, Material.rock)
-		.setHardness(2.5F).setStepSound(Block.soundGravelFootstep)
-		.setBlockName("generator").setCreativeTab(CreativeTabs.tabBlock);
-		
-		
 		
 		public  final static Item roadPainterItem = new RoadPainterItem(5001).setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc).setIconIndex(0).setItemName("roadPainter");
 		
@@ -80,7 +33,7 @@ public class Cityscape {
         
         // Says where the client and server 'proxy' code is loaded.
         @SidedProxy(clientSide="nightWolf.cityscape.client.ClientProxy", serverSide="nightWolf.cityscape.CommonProxy")
-        public static CommonProxy proxy;
+        public static CommonProxyCivilization proxy;
         
         @PreInit
         public void preInit(FMLPreInitializationEvent event) {
@@ -92,7 +45,6 @@ public class Cityscape {
                 proxy.registerRenderers();
                 
                 //ASPHALT
-                GameRegistry.registerBlock(asphalt, "asphat");
                 LanguageRegistry.addName(asphalt, "Asphalt");
                 MinecraftForge.setBlockHarvestLevel(asphalt, "shovel", 0);
                 

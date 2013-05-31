@@ -1,6 +1,6 @@
-package minecraft.phoenix.cityscape.space.core.handler;
+package minecraft.phoenix.cityscape.core.handler;
 
-import minecraft.phoenix.cityscape.space.command.CommandTpToDim;
+import minecraft.phoenix.cityscape.core.command.CommandTpToDim;
 import net.minecraft.command.CommandHandler;
 import cpw.mods.fml.common.event.FMLServerStartingEvent;
 
@@ -12,6 +12,7 @@ import cpw.mods.fml.common.event.FMLServerStartingEvent;
  * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * @author nightwolf98
  * @author Martijn
+ * @author jack9515
  *
  */
 

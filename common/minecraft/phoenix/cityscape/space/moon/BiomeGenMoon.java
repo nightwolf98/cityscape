@@ -1,6 +1,6 @@
 package minecraft.phoenix.cityscape.space.moon;
 
-import minecraft.phoenix.cityscape.space.lib.Strings;
+import minecraft.phoenix.cityscape.core.lib.Strings;
 import net.minecraft.world.biome.BiomeGenBase;
 
 /**

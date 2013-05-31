@@ -1,4 +1,4 @@
-package minecraft.phoenix.cityscape.space.lib;
+package minecraft.phoenix.cityscape.core.lib;
 
 /**
  * 21 Century Mod
@@ -8,6 +8,7 @@ package minecraft.phoenix.cityscape.space.lib;
  * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * @author nightwolf98
  * @author Martijn
+ * @author jack9515
  *
  */
 
@@ -22,4 +23,5 @@ public class Strings {
 	public static final String BLOCK_VECBLOCK 	= "vecBlock";
 	public static final String BIOME_NAME 		= "space";
 	public static final String TAB_SPACE_NAME 	= "21st Century: Space";
+	public static final String BLOCK_ASPHALT	= "asphalt";
 }

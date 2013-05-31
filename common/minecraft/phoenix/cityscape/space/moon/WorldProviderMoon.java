@@ -1,7 +1,7 @@
 package minecraft.phoenix.cityscape.space.moon;
 
-import minecraft.phoenix.cityscape.space.core.proxy.CommonProxyCivilization;
-import minecraft.phoenix.cityscape.space.lib.Reference;
+import minecraft.phoenix.cityscape.core.proxy.CommonProxyCivilization;
+import minecraft.phoenix.cityscape.core.lib.Reference;
 import minecraft.phoenix.cityscape.space.util.NullCloudRenderer;
 import minecraft.phoenix.cityscape.space.util.SkyRendererUtil;
 import net.minecraft.world.WorldProvider;

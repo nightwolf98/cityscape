@@ -5,13 +5,13 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.EnumHelper;
 import minecraft.phoenix.cityscape.space.block.ModBlock;
-import minecraft.phoenix.cityscape.space.core.handler.CustomCommandHandler;
-import minecraft.phoenix.cityscape.space.core.handler.LocalizationHandler;
-import minecraft.phoenix.cityscape.space.core.proxy.CommonProxyCivilization;
+import minecraft.phoenix.cityscape.core.handler.CustomCommandHandler;
+import minecraft.phoenix.cityscape.core.handler.LocalizationHandler;
+import minecraft.phoenix.cityscape.core.proxy.CommonProxyCivilization;
 import minecraft.phoenix.cityscape.space.creativeTabs.TabSpace;
 import minecraft.phoenix.cityscape.space.item.ModItem;
-import minecraft.phoenix.cityscape.space.lib.Reference;
-import minecraft.phoenix.cityscape.space.lib.Strings;
+import minecraft.phoenix.cityscape.core.lib.Reference;
+import minecraft.phoenix.cityscape.core.lib.Strings;
 import minecraft.phoenix.cityscape.space.moon.BiomeGenMoon;
 import minecraft.phoenix.cityscape.space.world.Space;
 import cpw.mods.fml.common.Mod;
@@ -33,6 +33,7 @@ import cpw.mods.fml.common.network.NetworkMod;
  * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * @author nightwolf98
  * @author Martijn
+ * @author jack9515
  *
  */
 
