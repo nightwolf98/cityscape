@@ -8,6 +8,8 @@ import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
+import net.minecraft.src.PlayerAPI;
+import net.minecraft.src.PlayerBase;
 import net.minecraft.stats.AchievementList;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
@@ -20,6 +22,7 @@ import net.minecraft.util.Vec3;
  * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * @author nightwolf98
  * @author Martijn
+ * @author jack9515
  *
  */
 
@@ -132,6 +135,7 @@ public class EntityPlayerSpace extends PlayerBase{
 	                }
 	            }
 	            else
+	            {
 	                if (player.timeInPortal > 0.0F){
 	                    player.timeInPortal -= 0.05F;
 	                }
