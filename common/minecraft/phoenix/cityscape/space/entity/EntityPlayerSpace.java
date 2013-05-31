@@ -2,7 +2,7 @@ package minecraft.phoenix.cityscape.space.entity;
 
 import java.util.List;
 
-import minecraft.phoenix.cityscape.space.item.ModItem;
+import minecraft.phoenix.cityscape.space.item.SpaceModItem;
 import minecraft.phoenix.cityscape.space.world.Space;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.Entity;
@@ -68,16 +68,16 @@ public class EntityPlayerSpace extends PlayerBase{
 			ItemStack chest = player.inventory.armorInventory[2];
 			ItemStack helm = player.inventory.armorInventory[3];
 			if (!(boots == null || legs == null || chest == null || helm == null)){
-				if (boots.itemID == ModItem.SpaceBoots.itemID
-						&& legs.itemID == ModItem.SpaceLegs.itemID
-						&& chest.itemID == ModItem.SpaceChest.itemID
-						&& helm.itemID == ModItem.SpaceHelmet.itemID){
+				if (boots.itemID == SpaceModItem.SpaceBoots.itemID
+						&& legs.itemID == SpaceModItem.SpaceLegs.itemID
+						&& chest.itemID == SpaceModItem.SpaceChest.itemID
+						&& helm.itemID == SpaceModItem.SpaceHelmet.itemID){
 					moonAir = maxAir;
 				}
 			}
 			
 			moonAir--;
-			int air = (int) ((300.0 / maxAir) * moonAir);
+			player.setAir((int) ((300.0 / maxAir) * moonAir));
 			
 			if (moonAir == -5){
 				moonAir = 0;

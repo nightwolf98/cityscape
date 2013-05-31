@@ -1,10 +1,9 @@
 package minecraft.phoenix.cityscape.core.block;
 
-import minecraft.phoenix.cityscape.core.Generator;
-import minecraft.phoenix.cityscape.core.SteelBlock;
 import minecraft.phoenix.cityscape.core.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraftforge.common.MinecraftForge;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 /**
@@ -19,7 +18,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
  *
  */
 
-public class ModBlock {
+public class CoreModBlock {
    
 	//Initializing Blocks
 	public static Block asphalt_DYH;
@@ -56,5 +55,28 @@ public class ModBlock {
 		generator = new Generator(514, Material.rock).setHardness(2.5F).setStepSound(Block.soundGravelFootstep).setUnlocalizedName("generator");
 		
 		GameRegistry.registerBlock(asphalt, Strings.BLOCK_ASPHALT);
+		MinecraftForge.setBlockHarvestLevel(asphalt, "shovel", 0);
+		GameRegistry.registerBlock(asphalt_DYH, Strings.BLOCK_ASPHALT_DYH);
+		MinecraftForge.setBlockHarvestLevel(asphalt_DYH, "shovel", 0);
+		GameRegistry.registerBlock(asphalt_DYV, Strings.BLOCK_ASPHALT_DYV);
+		MinecraftForge.setBlockHarvestLevel(asphalt_DYV, "shovel", 0);
+		GameRegistry.registerBlock(asphalt_SWV, Strings.BLOCK_ASPHALT_SWV);
+		MinecraftForge.setBlockHarvestLevel(asphalt_SWV, "shovel", 0);
+		GameRegistry.registerBlock(asphalt_SWH, Strings.BLOCK_ASPHALT_SWH);
+		MinecraftForge.setBlockHarvestLevel(asphalt_SWH, "shovel", 0);
+		GameRegistry.registerBlock(asphalt_SWB, Strings.BLOCK_ASPHALT_SWB);
+		MinecraftForge.setBlockHarvestLevel(asphalt_SWB, "shovel", 0);
+		GameRegistry.registerBlock(asphalt_SWL, Strings.BLOCK_ASPHALT_SWL);
+		MinecraftForge.setBlockHarvestLevel(asphalt_SWL, "shovel", 0);
+		GameRegistry.registerBlock(asphalt_SWR, Strings.BLOCK_ASPHALT_SWR);
+		MinecraftForge.setBlockHarvestLevel(asphalt_SWR, "shovel", 0);
+		GameRegistry.registerBlock(asphalt_SWT, Strings.BLOCK_ASPHALT_SWT);
+		MinecraftForge.setBlockHarvestLevel(asphalt_SWT, "shovel", 0);
+		
+		GameRegistry.registerBlock(steelBlock, "steelBlock");
+		MinecraftForge.setBlockHarvestLevel(steelBlock, "pickaxe", 2);
+		
+		GameRegistry.registerBlock(generator, "generator");
+		MinecraftForge.setBlockHarvestLevel(generator, "pickaxe", 1);
 	}
 }

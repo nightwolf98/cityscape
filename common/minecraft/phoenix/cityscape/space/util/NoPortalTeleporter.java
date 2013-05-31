@@ -3,7 +3,6 @@ package minecraft.phoenix.cityscape.space.util;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
-import java.util.Random;
 
 import net.minecraft.entity.Entity;
 import net.minecraft.util.Direction;
@@ -29,9 +28,6 @@ public class NoPortalTeleporter extends Teleporter
 {
 	private final WorldServer worldServerInstance;
 
-    /** A private Random() function in Teleporter */
-    private final Random random;
-
     /** Stores successful portal placement locations for rapid lookup. */
     private final LongHashMap destinationCoordinateCache = new LongHashMap();
 
@@ -39,13 +35,12 @@ public class NoPortalTeleporter extends Teleporter
      * A list of valid keys for the destinationCoordainteCache. These are based on the X & Z of the players initial
      * location.
      */
-    private final List destinationCoordinateKeys = new ArrayList();
+    private final List<Long> destinationCoordinateKeys = new ArrayList<Long>();
 
     public NoPortalTeleporter(WorldServer worldServer)
     {
 		super(worldServer);
 		worldServerInstance = worldServer;
-		random = new Random();
 	}
 
     /**
@@ -65,7 +60,6 @@ public class NoPortalTeleporter extends Teleporter
      */
     public boolean placeInExistingPortal(Entity par1Entity, double par2, double par4, double par6, float par8)
     {
-        short short1 = 128;
         double d3 = -1.0D;
         int i = 0;
         int j = 0;
@@ -201,7 +195,7 @@ public class NoPortalTeleporter extends Teleporter
     {
         if (par1 % 100L == 0L)
         {
-            Iterator iterator = this.destinationCoordinateKeys.iterator();
+            Iterator<Long> iterator = this.destinationCoordinateKeys.iterator();
             long j = par1 - 600L;
 
             while (iterator.hasNext())

@@ -21,7 +21,7 @@ import net.minecraftforge.common.DimensionManager;
  * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * @author nightwolf98
  * @author Martijn
- * 
+ * @author jack9515
  *
  */
 
@@ -84,10 +84,10 @@ public class CommandTpToDim extends CommandBase{
        	//Used the command wrong catch
        	else throw new WrongUsageException(getCommandUsage(par1ICommandSender), new Object[0]);
 	}
-
+	
 	@Override
-	public List addTabCompletionOptions(ICommandSender icommandsender, String[] astring){
-		
+	public List addTabCompletionOptions(ICommandSender icommandsender, String[] astring)
+	{
 		ArrayList<String> dims = new ArrayList<String>();
 		
 		for(int dimId : DimensionManager.getIDs()){

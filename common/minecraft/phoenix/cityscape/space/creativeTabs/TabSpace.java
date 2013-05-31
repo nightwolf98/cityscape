@@ -1,6 +1,6 @@
 package minecraft.phoenix.cityscape.space.creativeTabs;
 
-import minecraft.phoenix.cityscape.space.block.ModBlock;
+import minecraft.phoenix.cityscape.space.block.SpaceModBlock;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -26,7 +26,7 @@ public class TabSpace extends CreativeTabs{
 	@SideOnly(Side.CLIENT)
 	public int getTabIconItemIndex(){
 		
-		return ModBlock.moonrock.blockID;
+		return SpaceModBlock.moonrock.blockID;
 	}
 	
 	public String getTranslatedTabLabel(){

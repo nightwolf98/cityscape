@@ -4,12 +4,12 @@ import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.EnumHelper;
-import minecraft.phoenix.cityscape.space.block.ModBlock;
+import minecraft.phoenix.cityscape.space.block.SpaceModBlock;
 import minecraft.phoenix.cityscape.core.handler.CustomCommandHandler;
 import minecraft.phoenix.cityscape.core.handler.LocalizationHandler;
 import minecraft.phoenix.cityscape.core.proxy.CommonProxyCivilization;
 import minecraft.phoenix.cityscape.space.creativeTabs.TabSpace;
-import minecraft.phoenix.cityscape.space.item.ModItem;
+import minecraft.phoenix.cityscape.space.item.SpaceModItem;
 import minecraft.phoenix.cityscape.core.lib.Reference;
 import minecraft.phoenix.cityscape.core.lib.Strings;
 import minecraft.phoenix.cityscape.space.moon.BiomeGenMoon;
@@ -69,10 +69,10 @@ public class CivilizationSpace{
 		proxy.registerThings();
 		
 		//Initializing the Mod Items
-	    ModItem.init();   
+	    SpaceModItem.init();   
 	    
 	    //Initializing the Mod Blocks
-	    ModBlock.init();
+	    SpaceModBlock.init();
         
 		//Please put this in the proxy ;)
       	// PlayerAPI.register(Reference.modid, EntityPlayerSpace.class);

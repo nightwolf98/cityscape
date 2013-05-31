@@ -4,7 +4,7 @@ import minecraft.phoenix.cityscape.core.proxy.CommonProxyCivilization;
 import net.minecraft.item.Item;
 import net.minecraft.src.ModLoader;
 
-public class ModItem{
+public class SpaceModItem{
 	
 	//Initializing the Items
 	public static Item SpaceHelmet;

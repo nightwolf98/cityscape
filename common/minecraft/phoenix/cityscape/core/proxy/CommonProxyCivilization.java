@@ -1,15 +1,11 @@
 package minecraft.phoenix.cityscape.core.proxy;
 
-import minecraft.phoenix.cityscape.space.creativeTabs.TabSpace;
 import minecraft.phoenix.cityscape.core.lib.Reference;
-import minecraft.phoenix.cityscape.core.lib.Strings;
-import minecraft.phoenix.cityscape.space.moon.BiomeGenMoon;
 import minecraft.phoenix.cityscape.space.moon.WorldProviderMoon;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
-import net.minecraftforge.common.EnumHelper;
 import cpw.mods.fml.common.registry.GameRegistry;
 
 /**

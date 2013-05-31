@@ -16,7 +16,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
  *
  */
 
-public class ModBlock {
+public class SpaceModBlock {
    
 	//Initializing Blocks
 	public static Block moonrock;
