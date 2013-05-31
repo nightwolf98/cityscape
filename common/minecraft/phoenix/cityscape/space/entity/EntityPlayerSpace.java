@@ -263,5 +263,7 @@ public class EntityPlayerSpace extends PlayerBase{
 	        }
 		else
 			super.onLivingUpdate();
-	}//XXX ?????
+			
+		
+	}
 }
