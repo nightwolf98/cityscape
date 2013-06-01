@@ -41,15 +41,15 @@ public class CoreModBlock {
     
 	public static void init()
 	{
-		asphalt = new Asphalt(BlockIds.BlockID_Asphalt, Material.ground);
-		asphalt_DYH = new Asphalt_DYH(BlockIds.BlockID_Asphalt_DYH, Material.ground);
-		asphalt_DYV = new Asphalt_DYV(BlockIds.BlockID_Asphalt_DYV, Material.ground);
-		asphalt_SWV = new Asphalt_SWV(BlockIds.BlockID_Asphalt_SWV, Material.ground);
-		asphalt_SWH = new Asphalt_SWH(BlockIds.BlockID_Asphalt_SWH, Material.ground);
-		asphalt_SWB = new Asphalt_SWB(BlockIds.BlockID_Asphalt_SWB, Material.ground);
-		asphalt_SWL = new Asphalt_SWL(BlockIds.BlockID_Asphalt_SWL, Material.ground);
-		asphalt_SWR = new Asphalt_SWR(BlockIds.BlockID_Asphalt_SWR, Material.ground);
-		asphalt_SWT = new Asphalt_SWT(BlockIds.BlockID_Asphalt_SWT, Material.ground);
+		asphalt = new Asphalt(BlockIds.BlockID_Asphalt, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT);
+		asphalt_DYH = new Asphalt(BlockIds.BlockID_Asphalt_DYH, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_DYH);
+		asphalt_DYV = new Asphalt(BlockIds.BlockID_Asphalt_DYV, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_DYV);
+		asphalt_SWV = new Asphalt(BlockIds.BlockID_Asphalt_SWV, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWT);
+		asphalt_SWH = new Asphalt(BlockIds.BlockID_Asphalt_SWH, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWH);
+		asphalt_SWB = new Asphalt(BlockIds.BlockID_Asphalt_SWB, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWB);
+		asphalt_SWL = new Asphalt(BlockIds.BlockID_Asphalt_SWL, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWL);
+		asphalt_SWR = new Asphalt(BlockIds.BlockID_Asphalt_SWR, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWR);
+		asphalt_SWT = new Asphalt(BlockIds.BlockID_Asphalt_SWT, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWT);
 		steelBlock = new SteelBlock(BlockIds.BlockID_SteelBlock, Material.rock);
 		generator = new Generator(BlockIds.BlockID_Generator, Material.rock);
 		

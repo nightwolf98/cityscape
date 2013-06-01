@@ -1,9 +1,13 @@
 package minecraft.phoenix.cityscape.core.block;
 
 import minecraft.phoenix.cityscape.core.Cityscape;
-import minecraft.phoenix.cityscape.core.lib.Strings;
+import minecraft.phoenix.cityscape.core.lib.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.util.Icon;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  * 21 Century Mod
@@ -18,13 +22,32 @@ import net.minecraft.block.material.Material;
  */
 
 public class Asphalt extends Block
-{
+{	
 	public Asphalt (int i, Material material)
 	{
 		super(i, material);
 		this.setHardness(0.5F);
 		this.setStepSound(Block.soundGravelFootstep);
-		this.setUnlocalizedName(Strings.BLOCK_ASPHALT);
 		this.setCreativeTab(Cityscape.tabSpace);
 	}
+	
+	@SideOnly(Side.CLIENT)
+    private Icon[] icons;
+	
+	 @SideOnly(Side.CLIENT)
+	 public void registerIcons(IconRegister par1IconRegister)
+	 {
+		 icons = new Icon[9];
+	            
+		 for(int i = 0; i < icons.length; i++){
+	            	 	
+	                    icons[i] = par1IconRegister.registerIcon(Reference.modid + ":" + (this.getUnlocalizedName2()));
+	             }
+	    }
+	
+	@SideOnly(Side.CLIENT)
+    public Icon getIcon(int par1, int par2)
+    {
+          return icons[par2];
+    }
 }

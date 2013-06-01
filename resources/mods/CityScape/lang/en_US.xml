@@ -3,5 +3,6 @@
 <properties version="1.0">
 	<comment>English (en_US) Localization File</comment>
 	<entry key="item.spaceBoots.name">Space Boots</entry>
-	<entry key="tile.moonRock.name">Moon Rock</entry>
+	<entry key="tile.asphalt_DYH.name">Asphalt_DYH</entry>
+	<entry key="tile.asphalt.name">Asphalt</entry>
 </properties>
