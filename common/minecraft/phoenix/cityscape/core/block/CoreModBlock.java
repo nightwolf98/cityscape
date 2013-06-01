@@ -1,6 +1,7 @@
 package minecraft.phoenix.cityscape.core.block;
 
 import minecraft.phoenix.cityscape.core.lib.BlockIds;
+import minecraft.phoenix.cityscape.core.lib.Reference;
 import minecraft.phoenix.cityscape.core.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -42,26 +43,10 @@ public class CoreModBlock {
 	public static void init()
 	{
 		asphalt = new Asphalt(BlockIds.BlockID_Asphalt, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT);
-		asphalt_DYH = new Asphalt(BlockIds.BlockID_Asphalt_DYH, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_DYH);
-		asphalt_DYV = new Asphalt(BlockIds.BlockID_Asphalt_DYV, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_DYV);
-		asphalt_SWV = new Asphalt(BlockIds.BlockID_Asphalt_SWV, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWT);
-		asphalt_SWH = new Asphalt(BlockIds.BlockID_Asphalt_SWH, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWH);
-		asphalt_SWB = new Asphalt(BlockIds.BlockID_Asphalt_SWB, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWB);
-		asphalt_SWL = new Asphalt(BlockIds.BlockID_Asphalt_SWL, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWL);
-		asphalt_SWR = new Asphalt(BlockIds.BlockID_Asphalt_SWR, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWR);
-		asphalt_SWT = new Asphalt(BlockIds.BlockID_Asphalt_SWT, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT_SWT);
 		steelBlock = new SteelBlock(BlockIds.BlockID_SteelBlock, Material.rock);
 		generator = new Generator(BlockIds.BlockID_Generator, Material.rock);
-		
-		GameRegistry.registerBlock(asphalt, Strings.BLOCK_ASPHALT);
-		GameRegistry.registerBlock(asphalt_DYH, Strings.BLOCK_ASPHALT_DYH);
-		GameRegistry.registerBlock(asphalt_DYV, Strings.BLOCK_ASPHALT_DYV);
-		GameRegistry.registerBlock(asphalt_SWV, Strings.BLOCK_ASPHALT_SWV);
-		GameRegistry.registerBlock(asphalt_SWH, Strings.BLOCK_ASPHALT_SWH);
-		GameRegistry.registerBlock(asphalt_SWB, Strings.BLOCK_ASPHALT_SWB);
-		GameRegistry.registerBlock(asphalt_SWL, Strings.BLOCK_ASPHALT_SWL);
-		GameRegistry.registerBlock(asphalt_SWR, Strings.BLOCK_ASPHALT_SWR);
-		GameRegistry.registerBlock(asphalt_SWT, Strings.BLOCK_ASPHALT_SWT);
+
+		GameRegistry.registerBlock(asphalt, BlockMod.class, Reference.modid + (asphalt.getUnlocalizedName()));
 		GameRegistry.registerBlock(steelBlock, "steelBlock");
 		GameRegistry.registerBlock(generator, "generator");
 		

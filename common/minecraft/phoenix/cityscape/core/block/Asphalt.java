@@ -1,10 +1,14 @@
 package minecraft.phoenix.cityscape.core.block;
 
+import java.util.List;
+
 import minecraft.phoenix.cityscape.core.Cityscape;
 import minecraft.phoenix.cityscape.core.lib.Reference;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
+import net.minecraft.creativetab.CreativeTabs;
+import net.minecraft.item.ItemStack;
 import net.minecraft.util.Icon;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -40,8 +44,7 @@ public class Asphalt extends Block
 		 icons = new Icon[9];
 	            
 		 for(int i = 0; i < icons.length; i++){
-	            	 	
-	                    icons[i] = par1IconRegister.registerIcon(Reference.modid + ":" + (this.getUnlocalizedName2()));
+	                    icons[i] = par1IconRegister.registerIcon(Reference.modid + ":" + (this.getUnlocalizedName2()) + i);
 	             }
 	    }
 	
@@ -50,4 +53,14 @@ public class Asphalt extends Block
     {
           return icons[par2];
     }
+	
+	@SideOnly(Side.CLIENT)
+    public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
+    {
+        for (int var4 = 0; var4 < 9; ++var4)
+        {
+            par3List.add(new ItemStack(par1, 1, var4));
+        }
+    }
+	
 }

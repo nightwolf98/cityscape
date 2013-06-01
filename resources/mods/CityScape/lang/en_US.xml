@@ -5,4 +5,12 @@
 	<entry key="item.spaceBoots.name">Space Boots</entry>
 	<entry key="tile.asphalt_DYH.name">Asphalt_DYH</entry>
 	<entry key="tile.asphalt.name">Asphalt</entry>
+	<entry key="tile.asphalt_DYV.name">asphalt_DYV</entry>
+	<entry key="tile.asphalt_SWV.name">asphalt_SWV</entry>
+	<entry key="tile.asphalt_SWH.name">asphalt_SWH</entry>
+	<entry key="tile.asphalt_SWB.name">asphalt_SWB</entry>
+	<entry key="tile.asphalt_SWL.name">asphalt_SWL</entry>
+	<entry key="tile.asphalt_SWR.name">asphalt_SWR</entry>
+	<entry key="tile.asphalt_SWT.name">asphalt_SWT</entry>
+
 </properties>
