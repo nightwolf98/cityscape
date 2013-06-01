@@ -1,10 +1,11 @@
 package minecraft.phoenix.cityscape.core.item;
 
 import java.util.List;
+
+import minecraft.phoenix.cityscape.core.entity.EntityHumvee;
 import net.minecraft.block.Block;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.entity.Entity;
-import iad4m.entity.EntityHumvee;
 import net.minecraft.entity.player.EntityPlayer;
 import net.minecraft.item.Item;
 import net.minecraft.item.ItemStack;
