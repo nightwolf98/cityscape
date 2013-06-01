@@ -1,6 +1,6 @@
 package minecraft.phoenix.cityscape.space.block;
 
-import minecraft.phoenix.cityscape.core.proxy.CommonProxyCivilization;
+import minecraft.phoenix.cityscape.core.proxy.CommonProxy;
 import minecraft.phoenix.cityscape.core.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -21,7 +21,7 @@ public class BlockMoonRock extends Block{
     public BlockMoonRock(int par1){
     	
         super(par1, Material.rock);
-        this.setCreativeTab(CommonProxyCivilization.tabSpace);
+        this.setCreativeTab(CommonProxy.tabSpace);
         this.setUnlocalizedName(Strings.BLOCK_MOONROCK);
     }
 }

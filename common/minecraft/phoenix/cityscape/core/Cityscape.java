@@ -3,7 +3,9 @@ package minecraft.phoenix.cityscape.core;
 import minecraft.phoenix.cityscape.core.block.CoreModBlock;
 import minecraft.phoenix.cityscape.core.handler.LocalizationHandler;
 import minecraft.phoenix.cityscape.core.item.CoreModItem;
-import minecraft.phoenix.cityscape.core.proxy.CommonProxyCivilization;
+import minecraft.phoenix.cityscape.core.lib.Reference;
+import minecraft.phoenix.cityscape.core.proxy.CommonProxy;
+import minecraft.phoenix.cityscape.space.CivilizationSpace;
 import cpw.mods.fml.common.Mod;
 import cpw.mods.fml.common.Mod.Init;
 import cpw.mods.fml.common.Mod.Instance;
@@ -23,33 +25,39 @@ public class Cityscape {
         @Instance("cityScape")
         public static Cityscape instance;
         
+        public static CivilizationSpace space = new CivilizationSpace();;
+        
         // Says where the client and server 'proxy' code is loaded.
-        @SidedProxy(clientSide="nightWolf.cityscape.client.ClientProxy", serverSide="nightWolf.cityscape.CommonProxy")
-        public static CommonProxyCivilization proxy;
+        @SidedProxy(clientSide=Reference.ClientProxy, serverSide=Reference.CommonProxy)
+        public static CommonProxy proxy = new CommonProxy();
         
         @PreInit
-        public void preInit(FMLPreInitializationEvent event) {
-                // Stub Method
+        public void preInit(FMLPreInitializationEvent event)
+        {
+        	space.preInit(event);
+        	
+        	 //Loading language files
+    		LocalizationHandler.loadLanguages();
+    		
+    		//Registering things which dont have to be in the Main Mod file
+    		proxy.registerThings();
         }
         
         @Init
         public void load(FMLInitializationEvent event)
         {
-                //Loading language files
-        		LocalizationHandler.loadLanguages();
-        		
-        		//Registering things which dont have to be in the Main Mod file
-        		proxy.registerThings();
-        		
-        		//Initializing the Mod Items
-        	    CoreModItem.init();   
-        	    
-        	    //Initializing the Mod Blocks
-        	    CoreModBlock.init();
+        	//Initializing the Mod Items
+    	    CoreModItem.init();   
+    	    
+    	    //Initializing the Mod Blocks
+    	    CoreModBlock.init();
+        	
+        	space.init(event);
         }
         
         @PostInit
-        public void postInit(FMLPostInitializationEvent event) {
-                // Stub Method
+        public void postInit(FMLPostInitializationEvent event)
+        {
+        	// Stub Method
         }
 }

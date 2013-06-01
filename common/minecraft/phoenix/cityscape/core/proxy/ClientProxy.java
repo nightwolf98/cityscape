@@ -12,7 +12,7 @@ package minecraft.phoenix.cityscape.core.proxy;
  *
  */
 
-public class ClientProxyCivilization extends CommonProxyCivilization{
+public class ClientProxy extends CommonProxy{
 	
 	@Override
 	public void registerThings(){
