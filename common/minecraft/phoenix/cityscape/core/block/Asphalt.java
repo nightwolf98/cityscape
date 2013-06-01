@@ -1,6 +1,6 @@
 package minecraft.phoenix.cityscape.core.block;
 
-import minecraft.phoenix.cityscape.core.CityScape;
+import minecraft.phoenix.cityscape.core.Cityscape;
 import minecraft.phoenix.cityscape.core.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
@@ -25,6 +25,6 @@ public class Asphalt extends Block
 		this.setHardness(0.5F);
 		this.setStepSound(Block.soundGravelFootstep);
 		this.setUnlocalizedName(Strings.BLOCK_ASPHALT);
-		this.setCreativeTab(CityScape.tabSpace);
+		this.setCreativeTab(Cityscape.tabSpace);
 	}
 }

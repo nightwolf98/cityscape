@@ -53,11 +53,11 @@ import cpw.mods.fml.common.network.NetworkMod;
 		clientSideRequired=true, 
 		serverSideRequired=false)
 
-public class CityScape {
+public class Cityscape {
 	
         // The instance of your mod that Forge uses.
         @Instance(Reference.modid)
-        public static CityScape instance;
+        public static Cityscape instance;
         
         // Says where the client and server 'proxy' code is loaded.
         @SidedProxy(
