@@ -30,7 +30,7 @@ public class SpaceModBlock {
 	public static void init(){
 		
 		moonrock = new BlockMoonRock(250);
-		vecBlock = new BlockVecBlock(251, Material.air).setUnlocalizedName("vecBlock");
+		vecBlock = new BlockVecBlock(251, Material.air);
 		
 		GameRegistry.registerBlock(moonrock, Strings.BLOCK_MOONROCK);
 	}

@@ -5,7 +5,7 @@ import minecraft.phoenix.cityscape.space.entity.EntityPlayerSpace;
 import minecraft.phoenix.cityscape.space.moon.WorldProviderMoon;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
-import net.minecraft.src.PlayerAPI;
+//import net.minecraft.src.PlayerAPI;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.EnumHelper;
@@ -40,6 +40,6 @@ public class CommonProxy {
         
         GameRegistry.addBiome(moonBiome);
         
-        PlayerAPI.register(Reference.modid, EntityPlayerSpace.class);
+       // PlayerAPI.register(Reference.modid, EntityPlayerSpace.class);
 	}
 }

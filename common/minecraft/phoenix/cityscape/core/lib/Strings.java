@@ -1,6 +1,5 @@
 package minecraft.phoenix.cityscape.core.lib;
 
-
 /**
  * 21 Century Mod
  * 
@@ -26,6 +25,10 @@ public class Strings {
 	public static final String BLOCK_ASPHALT_SWL= "asphalt_SWL";
 	public static final String BLOCK_ASPHALT_SWR= "asphalt_SWR";
 	public static final String BLOCK_ASPHALT_SWT= "asphalt_SWT";
+	public static final String BLOCK_STEELBLOCK_NAME = "steelBlock";
+	public static final String ITEM_ROADPAINTER_NAME = "RoadPainter";
+	public static final String BLOCK_GENERATOR_NAME = "generator";
+	
 	
 	//Space
 	public static final String ITEM_SPACEBOOTS 	= "spaceBoots";
@@ -36,4 +39,5 @@ public class Strings {
 	public static final String BLOCK_VECBLOCK 	= "vecBlock";
 	public static final String BIOME_NAME 		= "space";
 	public static final String TAB_SPACE_NAME 	= "21st Century: Space";
+	public static final String BLOCK_VECBLOCK_NAME = "vecBlock";
 }

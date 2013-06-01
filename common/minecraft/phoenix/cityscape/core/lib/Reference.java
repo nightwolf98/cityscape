@@ -17,11 +17,11 @@ import net.minecraftforge.common.DimensionManager;
 public class Reference {
 	
 	//All references used in the mod
-	public static final String modid 			= "21st_Century_Mod";
-	public static final String name 			= "21st Century Mod";
+	public static final String modid 			= "CityScape";
+	public static final String name 				= "21st Century Mod";
 	public static final String version 			= "0.1a";
 	public static final String ClientProxy		= "minecraft.phoenix.cityscape.core.proxy.ClientProxy";
 	public static final String CommonProxy		= "minecraft.phoenix.cityscape.core.proxy.CommonProxy";
-	public static final String Language_location= "/mods/TwentyFirst_Century_Mod/lang/";
-	public static int moonID 					= DimensionManager.getNextFreeDimId();
+	public static final String Language_location= "/mods/CityScape/lang/";
+	public static int moonID 						= DimensionManager.getNextFreeDimId();
 }

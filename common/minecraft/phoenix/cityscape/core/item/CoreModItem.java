@@ -1,7 +1,18 @@
 package minecraft.phoenix.cityscape.core.item;
 
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
+
+/**
+ * 21 Century Mod
+ * 
+ * CoreModItem
+ * 
+ * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
+ * @author nightwolf98
+ * @author Martijn
+ * @author jack9515
+ *
+ */
 
 public class CoreModItem{
 	
@@ -14,6 +25,6 @@ public class CoreModItem{
     
     public static void init()
     {
-    	roadPainter= new RoadPainterItem(5001).setMaxStackSize(1).setCreativeTab(CreativeTabs.tabMisc).setUnlocalizedName("roadPainter");
+    	roadPainter= new RoadPainterItem(5001);
     }
 }

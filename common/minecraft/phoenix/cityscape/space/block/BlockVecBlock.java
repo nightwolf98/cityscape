@@ -25,7 +25,7 @@ public class BlockVecBlock extends Block{
 	public BlockVecBlock(int id, Material material){
 		
 		super(id, material);
-		this.setUnlocalizedName(Strings.BLOCK_VECBLOCK);
+		this.setUnlocalizedName(Strings.BLOCK_VECBLOCK_NAME);
 	}
 	
 	
