@@ -1,4 +1,4 @@
-package minecraft.phoenix.cityscape.space.creativeTabs;
+package minecraft.phoenix.cityscape.core.creativeTabs;
 
 import minecraft.phoenix.cityscape.space.block.SpaceModBlock;
 import net.minecraft.creativetab.CreativeTabs;
