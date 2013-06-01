@@ -23,7 +23,7 @@ public class Generator extends Block
 		super(i, material);
 		this.setHardness(2.5F);
 		this.setStepSound(Block.soundGravelFootstep);
-		this.setUnlocalizedName(Strings.BLOCK_GENERATOR_NAME);
+		this.setUnlocalizedName(Strings.BLOCK_GENERATOR);
 		
 	}
 }

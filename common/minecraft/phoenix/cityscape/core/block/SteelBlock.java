@@ -23,6 +23,6 @@ public class SteelBlock extends Block
 		super(i, material);
 		this.setHardness(2.5F);
 		this.setStepSound(Block.soundGravelFootstep);
-		this.setUnlocalizedName(Strings.BLOCK_STEELBLOCK_NAME);
+		this.setUnlocalizedName(Strings.BLOCK_STEELBLOCK);
 	}
 }

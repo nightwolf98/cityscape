@@ -34,6 +34,16 @@ public class ConfigurationHandler {
 			config.load();
 			
 			BlockIds.BlockID_Asphalt = config.getBlock(Strings.BLOCK_ASPHALT, BlockIds.BlockID_Asphalt_Default).getInt(BlockIds.BlockID_Asphalt_Default);
+			BlockIds.BlockID_Asphalt_DYV = config.getBlock(Strings.BLOCK_ASPHALT_DYV, BlockIds.BlockID_Asphalt_SWB_Default).getInt(BlockIds.BlockID_Asphalt_SWB_Default);
+			BlockIds.BlockID_Asphalt_SWB = config.getBlock(Strings.BLOCK_ASPHALT_SWB, BlockIds.BlockID_Asphalt_SWB_Default).getInt(BlockIds.BlockID_Asphalt_SWB_Default);
+			BlockIds.BlockID_Asphalt_DYH = config.getBlock(Strings.BLOCK_ASPHALT_DYH, BlockIds.BlockID_Asphalt_DYH_Default).getInt(BlockIds.BlockID_Asphalt_DYH_Default);
+			BlockIds.BlockID_Asphalt_SWH = config.getBlock(Strings.BLOCK_ASPHALT_SWH, BlockIds.BlockID_Asphalt_SWH_Default).getInt(BlockIds.BlockID_Asphalt_SWH_Default);
+			BlockIds.BlockID_Asphalt_SWL = config.getBlock(Strings.BLOCK_ASPHALT_SWL, BlockIds.BlockID_Asphalt_SWL_Default).getInt(BlockIds.BlockID_Asphalt_SWL_Default);
+			BlockIds.BlockID_Asphalt_SWR = config.getBlock(Strings.BLOCK_ASPHALT_SWR, BlockIds.BlockID_Asphalt_SWR_Default).getInt(BlockIds.BlockID_Asphalt_SWR_Default);
+			BlockIds.BlockID_Asphalt_SWT = config.getBlock(Strings.BLOCK_ASPHALT_SWT, BlockIds.BlockID_Asphalt_SWT_Default).getInt(BlockIds.BlockID_Asphalt_SWT_Default);
+			BlockIds.BlockID_Asphalt_SWV = config.getBlock(Strings.BLOCK_ASPHALT_SWV, BlockIds.BlockID_Asphalt_SWV_Default).getInt(BlockIds.BlockID_Asphalt_SWV_Default);
+			BlockIds.BlockID_Generator = config.getBlock(Strings.BLOCK_GENERATOR, BlockIds.BlockID_Generator_Default).getInt(BlockIds.BlockID_Generator_Default);
+			BlockIds.BlockID_SteelBlock = config.getBlock(Strings.BLOCK_STEELBLOCK, BlockIds.BlockID_SteelBlock_Default).getInt(BlockIds.BlockID_SteelBlock_Default);
 			
 			
 			

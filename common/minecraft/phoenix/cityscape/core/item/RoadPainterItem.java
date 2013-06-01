@@ -22,6 +22,6 @@ public class RoadPainterItem extends Item {
                 super(id);
                 this.setMaxStackSize(1);
                 this.setCreativeTab(CreativeTabs.tabMisc);
-                this.setUnlocalizedName(Strings.ITEM_ROADPAINTER_NAME);
+                this.setUnlocalizedName(Strings.ITEM_ROADPAINTER);
         }
 }

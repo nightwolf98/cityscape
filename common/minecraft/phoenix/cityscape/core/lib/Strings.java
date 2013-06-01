@@ -25,9 +25,9 @@ public class Strings {
 	public static final String BLOCK_ASPHALT_SWL= "asphalt_SWL";
 	public static final String BLOCK_ASPHALT_SWR= "asphalt_SWR";
 	public static final String BLOCK_ASPHALT_SWT= "asphalt_SWT";
-	public static final String BLOCK_STEELBLOCK_NAME = "steelBlock";
-	public static final String ITEM_ROADPAINTER_NAME = "RoadPainter";
-	public static final String BLOCK_GENERATOR_NAME = "generator";
+	public static final String BLOCK_STEELBLOCK = "steelBlock";
+	public static final String ITEM_ROADPAINTER = "RoadPainter";
+	public static final String BLOCK_GENERATOR = "generator";
 	
 	
 	//Space
