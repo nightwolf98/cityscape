@@ -1,4 +1,4 @@
-package iad4m.models;
+package minecraft.phoenix.cityscape.core.entity.model;
 
 import net.minecraft.client.model.ModelBase;
 import net.minecraft.client.model.ModelRenderer;

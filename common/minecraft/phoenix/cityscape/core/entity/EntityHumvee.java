@@ -1,4 +1,4 @@
-package iad4m.entity;
+package minecraft.phoenix.cityscape.core.entity;
 
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;

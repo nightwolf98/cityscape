@@ -1,4 +1,4 @@
-package iad4m.items;
+package minecraft.phoenix.cityscape.core.item;
 
 import java.util.List;
 import net.minecraft.block.Block;

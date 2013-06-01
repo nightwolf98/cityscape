@@ -1,4 +1,4 @@
-package iad4m.entity.render;
+package minecraft.phoenix.cityscape.core.entity.render;
 
 import iad4m.entity.EntityBullet;
 import iad4m.models.ModelBullet;

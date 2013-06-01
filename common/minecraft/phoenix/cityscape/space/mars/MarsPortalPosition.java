@@ -1,4 +1,4 @@
-package iad4m.dimensions;
+package minecraft.phoenix.cityscape.space.mars;
 import net.minecraft.util.ChunkCoordinates;
 public class MarsPortalPosition extends ChunkCoordinates
 {

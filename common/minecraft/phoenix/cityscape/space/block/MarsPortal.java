@@ -1,4 +1,4 @@
-package iad4m.blocks;
+package minecraft.phoenix.cityscape.space.block;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
 import iad4m.iAd4m;

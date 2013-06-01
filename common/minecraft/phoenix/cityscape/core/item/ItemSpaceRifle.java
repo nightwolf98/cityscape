@@ -1,4 +1,4 @@
-package iad4m.items;
+package minecraft.phoenix.cityscape.core.item;
 
 import iad4m.iAd4m;
 import iad4m.entity.EntityBullet;

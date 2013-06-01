@@ -1,4 +1,4 @@
-package iad4m.dimensions;
+package minecraft.phoenix.cityscape.space.mars;
 import iad4m.iAd4m;
 
 import java.util.ArrayList;
