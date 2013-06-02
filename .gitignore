@@ -2,8 +2,8 @@
 ## Eclipse
 #################
 
-*.jar
 build_number.properties
+*.jar
 *.bat
 *.pydevproject
 .project
