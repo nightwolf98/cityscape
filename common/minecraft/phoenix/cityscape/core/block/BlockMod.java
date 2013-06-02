@@ -39,7 +39,7 @@ public class BlockMod extends ItemBlock
                     case 8:{  name = "_SWT";  break; }
                     default: name = "";
              }
-             return getUnlocalizedName()+ name;
+             return getUnlocalizedName() + name;
        }
       
        public int getMetadata(int par1)
