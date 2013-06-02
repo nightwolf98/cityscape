@@ -19,4 +19,6 @@
 	<entry key="item.spaceChest.name">Space Suit Chest</entry>
 	<entry key="item.spaceHelmet.name">Space Helmet</entry>
 	<entry key="item.spaceLegs.name">Space Suit Legs</entry>
+	<entry key="itemGroup.21st Century Mod: Space">21st Century Mod: Space</entry>
+	<entry key="itemGroup.21st Century Mod">21st Century Mod</entry>
 </properties>

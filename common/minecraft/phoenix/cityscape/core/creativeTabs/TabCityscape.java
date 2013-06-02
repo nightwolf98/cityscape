@@ -32,11 +32,4 @@ public class TabCityscape extends CreativeTabs
 		
 		return CoreModBlock.steelBlock.blockID;
 	}
-	
-	public String getTranslatedTabLabel()
-	{
-		// XXX check
-		
-		return "Modern Civilizations";
-	}
 }
