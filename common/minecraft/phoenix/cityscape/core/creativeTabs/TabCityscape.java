@@ -1,6 +1,6 @@
 package minecraft.phoenix.cityscape.core.creativeTabs;
 
-import minecraft.phoenix.cityscape.space.block.SpaceModBlock;
+import minecraft.phoenix.cityscape.core.block.CoreModBlock;
 import net.minecraft.creativetab.CreativeTabs;
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
@@ -17,23 +17,26 @@ import cpw.mods.fml.relauncher.SideOnly;
  * 
  */
 
-public class TabSpace extends CreativeTabs
+public class TabCityscape extends CreativeTabs
 {
-	public TabSpace(int position, String tabId)
+	
+	public TabCityscape(int position, String tabId)
 	{
+		
 		super(position, tabId);
 	}
 	
 	@SideOnly(Side.CLIENT)
 	public int getTabIconItemIndex()
 	{
-		return SpaceModBlock.moonrock.blockID;
+		
+		return CoreModBlock.steelBlock.blockID;
 	}
 	
 	public String getTranslatedTabLabel()
 	{
 		// XXX check
 		
-		return "Modern Civilizations: Space";
+		return "Modern Civilizations";
 	}
 }

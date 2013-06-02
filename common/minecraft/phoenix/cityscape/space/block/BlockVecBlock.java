@@ -28,13 +28,11 @@ public class BlockVecBlock extends Block{
 		this.setUnlocalizedName(Strings.BLOCK_VECBLOCK_NAME);
 	}
 	
-	
 	@Override
 	public boolean isAirBlock(World world, int x, int y, int z)	{
 		
 		return true;
 	}
-	
 	
 	@Override
 	public void onBlockAdded(World world, int x, int y, int z)	{
@@ -48,7 +46,6 @@ public class BlockVecBlock extends Block{
 	 * 
 	 * @return vector
 	 */
-	
 	public Vector3D getVector(){
 		
 		return vector;
@@ -60,7 +57,6 @@ public class BlockVecBlock extends Block{
 	 * @param vector
 	 * 			Vector to be set
 	 */
-	
 	public void setVector(Vector3D vector){
 		
 		this.vector = vector;

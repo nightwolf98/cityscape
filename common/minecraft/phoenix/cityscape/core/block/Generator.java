@@ -1,6 +1,7 @@
 package minecraft.phoenix.cityscape.core.block;
 
 import minecraft.phoenix.cityscape.core.lib.Strings;
+import minecraft.phoenix.cityscape.core.proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 
@@ -24,6 +25,6 @@ public class Generator extends Block
 		this.setHardness(2.5F);
 		this.setStepSound(Block.soundGravelFootstep);
 		this.setUnlocalizedName(Strings.BLOCK_GENERATOR);
-		
+		this.setCreativeTab(CommonProxy.tabCityscape);
 	}
 }

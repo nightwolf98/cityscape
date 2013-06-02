@@ -3,6 +3,7 @@ package minecraft.phoenix.cityscape.core;
 import java.io.File;
 
 import minecraft.phoenix.cityscape.core.block.CoreModBlock;
+import minecraft.phoenix.cityscape.core.creativeTabs.TabCityscape;
 import minecraft.phoenix.cityscape.core.handler.ConfigurationHandler;
 import minecraft.phoenix.cityscape.core.handler.CustomCommandHandler;
 import minecraft.phoenix.cityscape.core.handler.LocalizationHandler;
@@ -69,8 +70,6 @@ public class Cityscape {
     	
    		public static BiomeGenBase moonBiome = (new BiomeGenMoon(30)).setColor(16421912).setBiomeName("Moon").setDisableRain().setTemperatureRainfall(2.0F, 0.0F).setMinMaxHeight(0.1F, 0.2F);
    		public static EnumArmorMaterial EnumArmorMaterialSpace = EnumHelper.addArmorMaterial("Space Armor", 35, new int[] {4,9,7,6}, 15);
-   		public static CreativeTabs tabSpace = new TabSpace(CreativeTabs.getNextID(), Strings.TAB_SPACE_NAME); 
-   	
    	 
         @PreInit
         public void preInit(FMLPreInitializationEvent event) {

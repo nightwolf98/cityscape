@@ -1,6 +1,7 @@
 package minecraft.phoenix.cityscape.core.item;
 
 import minecraft.phoenix.cityscape.core.lib.Strings;
+import minecraft.phoenix.cityscape.core.proxy.CommonProxy;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.Item;
 
@@ -21,7 +22,7 @@ public class RoadPainterItem extends Item {
         public RoadPainterItem(int id) {
                 super(id);
                 this.setMaxStackSize(1);
-                this.setCreativeTab(CreativeTabs.tabMisc);
+                this.setCreativeTab(CommonProxy.tabCityscape);
                 this.setUnlocalizedName(Strings.ITEM_ROADPAINTER);
         }
 }

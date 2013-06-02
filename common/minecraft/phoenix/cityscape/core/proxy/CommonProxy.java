@@ -1,6 +1,9 @@
 package minecraft.phoenix.cityscape.core.proxy;
 
+import minecraft.phoenix.cityscape.core.creativeTabs.TabCityscape;
 import minecraft.phoenix.cityscape.core.lib.Reference;
+import minecraft.phoenix.cityscape.core.lib.Strings;
+import minecraft.phoenix.cityscape.space.creativeTabs.TabSpace;
 import minecraft.phoenix.cityscape.space.entity.EntityPlayerSpace;
 import minecraft.phoenix.cityscape.space.moon.WorldProviderMoon;
 import net.minecraft.creativetab.CreativeTabs;
@@ -27,7 +30,8 @@ public class CommonProxy {
 
 	 public static BiomeGenBase moonBiome;
 	 public static EnumArmorMaterial EnumArmorMaterialSpace = EnumHelper.addArmorMaterial("spaceSuit", 1000, new int[]{0, 0, 0, 0}, 0);
-	 public static CreativeTabs tabSpace;
+	 public static CreativeTabs tabSpace = new TabSpace(CreativeTabs.getNextID(), Strings.TAB_SPACE_NAME);
+	 public static CreativeTabs tabCityscape = new TabCityscape(CreativeTabs.getNextID(), Strings.TAB_CITYSCAPE_NAME);
 	 
 	/**
 	 * Registers things which don't have a specific place.

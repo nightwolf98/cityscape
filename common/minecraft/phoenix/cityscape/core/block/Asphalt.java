@@ -1,9 +1,8 @@
 package minecraft.phoenix.cityscape.core.block;
 
 import java.util.List;
-
-import minecraft.phoenix.cityscape.core.Cityscape;
 import minecraft.phoenix.cityscape.core.lib.Reference;
+import minecraft.phoenix.cityscape.core.proxy.CommonProxy;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
 import net.minecraft.client.renderer.texture.IconRegister;
@@ -32,7 +31,7 @@ public class Asphalt extends Block
 		super(i, material);
 		this.setHardness(0.5F);
 		this.setStepSound(Block.soundGravelFootstep);
-		this.setCreativeTab(Cityscape.tabSpace);
+		this.setCreativeTab(CommonProxy.tabCityscape);
 	}
 	
 	@SideOnly(Side.CLIENT)

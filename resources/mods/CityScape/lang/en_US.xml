@@ -2,15 +2,21 @@
 <!DOCTYPE properties SYSTEM "http://java.sun.com/dtd/properties.dtd">
 <properties version="1.0">
 	<comment>English (en_US) Localization File</comment>
-	<entry key="item.spaceBoots.name">Space Boots</entry>
-	<entry key="tile.asphalt_DYH.name">Asphalt_DYH</entry>
 	<entry key="tile.asphalt.name">Asphalt</entry>
-	<entry key="tile.asphalt_DYV.name">asphalt_DYV</entry>
-	<entry key="tile.asphalt_SWV.name">asphalt_SWV</entry>
-	<entry key="tile.asphalt_SWH.name">asphalt_SWH</entry>
-	<entry key="tile.asphalt_SWB.name">asphalt_SWB</entry>
-	<entry key="tile.asphalt_SWL.name">asphalt_SWL</entry>
-	<entry key="tile.asphalt_SWR.name">asphalt_SWR</entry>
-	<entry key="tile.asphalt_SWT.name">asphalt_SWT</entry>
-
+	<entry key="tile.asphalt_DYH.name">Asphalt</entry>
+	<entry key="tile.asphalt_DYV.name">Asphalt</entry>
+	<entry key="tile.asphalt_SWV.name">Asphalt</entry>
+	<entry key="tile.asphalt_SWH.name">Asphalt</entry>
+	<entry key="tile.asphalt_SWB.name">Asphalt</entry>
+	<entry key="tile.asphalt_SWL.name">Asphalt</entry>
+	<entry key="tile.asphalt_SWR.name">Asphalt</entry>
+	<entry key="tile.asphalt_SWT.name">Asphalt</entry>
+	<entry key="tile.generator.name">Generator</entry>
+	<entry key="tile.steelBlock.name">Steel Block</entry>
+	<entry key="item.roadPainter.name">Road Painter</entry>
+	<entry key="tile.moonRock.name">Moon Rock</entry>
+	<entry key="item.spaceBoots.name">Space Boots</entry>
+	<entry key="item.spaceChest.name">Space Suit Chest</entry>
+	<entry key="item.spaceHelmet.name">Space Helmet</entry>
+	<entry key="item.spaceLegs.name">Space Suit Legs</entry>
 </properties>

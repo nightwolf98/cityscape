@@ -26,8 +26,9 @@ public class Strings {
 	public static final String BLOCK_ASPHALT_SWR= "asphalt_SWR";
 	public static final String BLOCK_ASPHALT_SWT= "asphalt_SWT";
 	public static final String BLOCK_STEELBLOCK = "steelBlock";
-	public static final String ITEM_ROADPAINTER = "RoadPainter";
+	public static final String ITEM_ROADPAINTER = "roadPainter";
 	public static final String BLOCK_GENERATOR = "generator";
+	public static final String TAB_CITYSCAPE_NAME 	= "21st Century Mod";
 	
 	
 	//Space
@@ -38,6 +39,6 @@ public class Strings {
 	public static final String BLOCK_MOONROCK 	= "moonRock";
 	public static final String BLOCK_VECBLOCK 	= "vecBlock";
 	public static final String BIOME_NAME 		= "space";
-	public static final String TAB_SPACE_NAME 	= "21st Century: Space";
+	public static final String TAB_SPACE_NAME 	= "21st Century Mod: Space";
 	public static final String BLOCK_VECBLOCK_NAME = "vecBlock";
 }
