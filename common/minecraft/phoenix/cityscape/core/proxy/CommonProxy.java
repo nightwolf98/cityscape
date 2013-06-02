@@ -28,7 +28,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 
 public class CommonProxy {
 
-	 public static BiomeGenBase moonBiome;
+
 	 public static EnumArmorMaterial EnumArmorMaterialSpace = EnumHelper.addArmorMaterial("spaceSuit", 1000, new int[]{0, 0, 0, 0}, 0);
 	 public static CreativeTabs tabSpace = new TabSpace(CreativeTabs.getNextID(), Strings.TAB_SPACE_NAME);
 	 public static CreativeTabs tabCityscape = new TabCityscape(CreativeTabs.getNextID(), Strings.TAB_CITYSCAPE_NAME);
@@ -39,11 +39,6 @@ public class CommonProxy {
 	
 	public void registerThings()
 	{
-		DimensionManager.registerProviderType(Reference.moonID, WorldProviderMoon.class, false);
-        DimensionManager.registerDimension(Reference.moonID, Reference.moonID);
-        
-        GameRegistry.addBiome(moonBiome);
-        
        // PlayerAPI.register(Reference.modid, EntityPlayerSpace.class);
 	}
 }

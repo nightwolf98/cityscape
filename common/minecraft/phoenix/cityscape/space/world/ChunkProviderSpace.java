@@ -1,9 +1,8 @@
 package minecraft.phoenix.cityscape.space.world;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Random;
-
-import minecraft.phoenix.cityscape.space.world.MapGenSatellite.satellite;
 import net.minecraft.entity.EnumCreatureType;
 import net.minecraft.util.IProgressUpdate;
 import net.minecraft.world.ChunkPosition;
@@ -11,34 +10,13 @@ import net.minecraft.world.World;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraft.world.chunk.Chunk;
 import net.minecraft.world.chunk.IChunkProvider;
-
-/**
- * 21 Century Mod
- * 
- * ChunkProviderSpace
- * 
- * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
- * @author nightwolf98
- * @author Martijn
- * @author jack9515
- *
- */
+import net.minecraft.world.chunk.storage.ExtendedBlockStorage;
 
 public class ChunkProviderSpace implements IChunkProvider
 {
-    /** Reference to the World object. */
-    private World worldObj;
-
-    /** The biomes that are used to generate the chunk */
-    private BiomeGenBase[] biomesForGeneration;
-
-    /**
-     * Used to store the 5x5 parabolic field that is used during terrain generation.
-     */
-    float[] parabolicField;
-    int[][] field_73219_j = new int[32][32];
-    
-    private MapGenSatellite solGenerator = new MapGenSatellite(MapGenSatellite.satellite.Sol);
+	private ArrayList<ChunkPosition> solCoords = new ArrayList<ChunkPosition>(3);
+	
+	private MapGenSatellite solGenerator = new MapGenSatellite(MapGenSatellite.satellite.Sol);
     private MapGenSatellite belisamaGenerator = new MapGenSatellite(MapGenSatellite.satellite.Belisama);
     private MapGenSatellite icaunusGenerator = new MapGenSatellite(MapGenSatellite.satellite.Icaunus);
     private MapGenSatellite overworldGenerator = new MapGenSatellite(MapGenSatellite.satellite.Overworld);
@@ -48,12 +26,19 @@ public class ChunkProviderSpace implements IChunkProvider
     private MapGenSatellite veGenerator = new MapGenSatellite(MapGenSatellite.satellite.Ve);
     private MapGenSatellite kuGenerator = new MapGenSatellite(MapGenSatellite.satellite.Ku);
     private MapGenSatellite sifGenerator = new MapGenSatellite(MapGenSatellite.satellite.Sif);
+	
+    private World worldObj;
+    private final byte[] field_82700_c = new byte[256];
+    private final byte[] field_82698_d = new byte[256];
 
     public ChunkProviderSpace(World par1World)
     {
         this.worldObj = par1World;
     }
 
+    /**
+     * loads or generates the chunk at the chunk location specified
+     */
     public Chunk loadChunk(int par1, int par2)
     {
         return this.provideChunk(par1, par2);
@@ -63,43 +48,73 @@ public class ChunkProviderSpace implements IChunkProvider
      * Will return back a chunk, if it doesn't exist and its not a MP client it will generates all the blocks for the
      * specified chunk from the map seed and chunk seed
      */
-    public Chunk provideChunk(int par1, int par2)
+    public Chunk provideChunk(int chunkX, int chunkZ)
     {
-        byte[] var3 = new byte[32768];
-        this.biomesForGeneration = this.worldObj.getWorldChunkManager().loadBlockGeneratorData(this.biomesForGeneration, par1 * 16, par2 * 16, 16, 16);
-        
-        solGenerator.generate(worldObj, new Random(), 0, 128, 0);
-        belisamaGenerator.generate(worldObj, new Random(), 0, 128, 0);
-        icaunusGenerator.generate(worldObj, new Random(), 0, 128, 0);
-        overworldGenerator.generate(worldObj, new Random(), 0, 128, 0);
-        lonaGenerator.generate(worldObj, new Random(), 0, 128, 0);
-        lenusGenerator.generate(worldObj, new Random(), 0, 128, 0);
-        juventusGenerator.generate(worldObj, new Random(), 0, 128, 0);
-        veGenerator.generate(worldObj, new Random(), 0, 128, 0);
-        kuGenerator.generate(worldObj, new Random(), 0, 128, 0);
-        sifGenerator.generate(worldObj, new Random(), 0, 128, 0);
+    	int x = chunkX * 16;
+    	int z = chunkZ * 16;
+    	if(solCoords.isEmpty() || distanceToNearest(new ChunkPosition(x, 128, z)) > 128.0D)
+    	{
+    		solCoords.add(new ChunkPosition(x, 128, z));
+    		solGenerator.generate(worldObj, new Random(), x, 128, z);
+    		belisamaGenerator.generate(worldObj, new Random(), x-30, 128, z-30);
+    		icaunusGenerator.generate(worldObj, new Random(), x+40, 128, z-40);
+    		overworldGenerator.generate(worldObj, new Random(), x+50, 128, z+50);
+    		lonaGenerator.generate(worldObj, new Random(), x+55, 128, z+55);
+    		lenusGenerator.generate(worldObj, new Random(), x-60, 128, z+60);
+    		juventusGenerator.generate(worldObj, new Random(), x-70, 128, z-70);
+    		veGenerator.generate(worldObj, new Random(), x-77, 128, z-77);
+    		kuGenerator.generate(worldObj, new Random(), x-77, 128, z-63);
+    		sifGenerator.generate(worldObj, new Random(), x-63, 128, z-77);
+    	}
+    	
+        Chunk chunk = new Chunk(this.worldObj, chunkX, chunkZ);
 
-        Chunk var4 = new Chunk(this.worldObj, var3, par1, par2);
-        byte[] var5 = var4.getBiomeArray();
-
-        for (int var6 = 0; var6 < var5.length; ++var6)
+        for (int k = 0; k < this.field_82700_c.length; ++k)
         {
-            var5[var6] = (byte)this.biomesForGeneration[var6].biomeID;
+            int l = k >> 4;
+            ExtendedBlockStorage extendedblockstorage = chunk.getBlockStorageArray()[l];
+
+            if (extendedblockstorage == null)
+            {
+                extendedblockstorage = new ExtendedBlockStorage(k, !this.worldObj.provider.hasNoSky);
+                chunk.getBlockStorageArray()[l] = extendedblockstorage;
+            }
+
+            for (int i1 = 0; i1 < 16; ++i1)
+            {
+                for (int j1 = 0; j1 < 16; ++j1)
+                {
+                    extendedblockstorage.setExtBlockID(i1, k & 15, j1, this.field_82700_c[k] & 255);
+                    extendedblockstorage.setExtBlockMetadata(i1, k & 15, j1, this.field_82698_d[k]);
+                }
+            }
         }
 
-        var4.generateSkylightMap();
-        return var4;
+        chunk.generateSkylightMap();
+        BiomeGenBase[] abiomegenbase = this.worldObj.getWorldChunkManager().loadBlockGeneratorData((BiomeGenBase[])null, chunkX * 16, chunkZ * 16, 16, 16);
+        byte[] abyte = chunk.getBiomeArray();
+
+        for (int k1 = 0; k1 < abyte.length; ++k1)
+        {
+            abyte[k1] = (byte)abiomegenbase[k1].biomeID;
+        }
+
+        chunk.generateSkylightMap();
+        return chunk;
     }
 
-    /**
-     * generates a subset of the level's terrain data. Takes 7 arguments: the [empty] noise array, the position, and the
-     * size.
-     */
-    private double[] initializeNoiseField(double[] par1ArrayOfDouble, int par2, int par3, int par4, int par5, int par6, int par7)
-    {
-        return par1ArrayOfDouble;
-    }
-
+    private double distanceToNearest(ChunkPosition chunkPos)
+	{
+		double nearDistance = Double.MAX_VALUE;
+		for(ChunkPosition pos : solCoords)
+		{
+			double dist = Math.hypot(chunkPos.x-pos.x, chunkPos.z-pos.z);
+			if(dist < nearDistance)
+				nearDistance = dist;
+		}
+		return nearDistance;
+	}
+    
     /**
      * Checks to see if a chunk exists at x, y
      */
@@ -122,11 +137,12 @@ public class ChunkProviderSpace implements IChunkProvider
         return true;
     }
 
+    public void func_104112_b() {}
+
     /**
-     * Unloads the 100 oldest chunks from memory, due to a bug with chunkSet.add() never being called it thinks the list
-     * is always empty and will not remove any chunks.
+     * Unloads chunks that are marked to be unloaded. This is not guaranteed to unload every such chunk.
      */
-    public boolean unload100OldestChunks()
+    public boolean unloadQueuedChunks()
     {
         return false;
     }
@@ -152,51 +168,24 @@ public class ChunkProviderSpace implements IChunkProvider
      */
     public List getPossibleCreatures(EnumCreatureType par1EnumCreatureType, int par2, int par3, int par4)
     {
-    	return null;
+        return null;
     }
 
     /**
      * Returns the location of the closest structure of the specified type. If not found returns null.
      */
-    public ChunkPosition findClosestStructure(World world, String struct, int x, int y, int z){
-    	satellite solarbody = MapGenSatellite.satellite.valueOf(struct);
-    	switch(solarbody)
-    	{
-		case Belisama:
-			return this.belisamaGenerator.getCoords();
-		case Icaunus:
-			return this.icaunusGenerator.getCoords();
-		case Juventus:
-			return this.juventusGenerator.getCoords();
-		case Ku:
-			return this.kuGenerator.getCoords();
-		case Lenus:
-			return this.lenusGenerator.getCoords();
-		case Lona:
-			return this.lonaGenerator.getCoords();
-		case Overworld:
-			return this.overworldGenerator.getCoords();
-		case Sif:
-			return this.sifGenerator.getCoords();
-		case Sol:
-			return this.solGenerator.getCoords();
-		case Ve:
-			return this.veGenerator.getCoords();
-      	}
-        return null;
+    public ChunkPosition findClosestStructure(World par1World, String par2Str, int par3, int par4, int par5)
+    {
+    	return null;
     }
 
-    public int getLoadedChunkCount(){
+    public int getLoadedChunkCount()
+    {
         return 0;
     }
 
-    public void recreateStructures(int par1, int par2){}
-
-	@Override
-	public boolean unloadQueuedChunks(){
-		return false;
-	}
-
-	@Override
-	public void func_104112_b() {}
+    public void recreateStructures(int par1, int par2)
+    {
+    	
+    }
 }

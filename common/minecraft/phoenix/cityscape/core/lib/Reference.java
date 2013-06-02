@@ -1,6 +1,5 @@
 package minecraft.phoenix.cityscape.core.lib;
 
-import net.minecraftforge.common.DimensionManager;
 
 /**
  * 21 Century Mod
@@ -23,5 +22,4 @@ public class Reference {
 	public static final String ClientProxy		= "minecraft.phoenix.cityscape.core.proxy.ClientProxy";
 	public static final String CommonProxy		= "minecraft.phoenix.cityscape.core.proxy.CommonProxy";
 	public static final String Language_location= "/mods/Cityscape/lang/";
-	public static int moonID 						= DimensionManager.getNextFreeDimId();
 }

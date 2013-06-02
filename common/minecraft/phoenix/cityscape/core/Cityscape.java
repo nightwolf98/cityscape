@@ -11,6 +11,7 @@ import minecraft.phoenix.cityscape.core.proxy.CommonProxy;
 import minecraft.phoenix.cityscape.space.block.SpaceModBlock;
 import minecraft.phoenix.cityscape.space.item.SpaceModItem;
 import minecraft.phoenix.cityscape.space.moon.BiomeGenMoon;
+import minecraft.phoenix.cityscape.space.moon.Moon;
 import minecraft.phoenix.cityscape.space.world.Space;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.world.biome.BiomeGenBase;
@@ -62,6 +63,7 @@ public class Cityscape {
         public static CommonProxy proxy;
         
     	private static Space space = new Space();
+    	private static Moon moon = new Moon();
     	
    		public static BiomeGenBase moonBiome = (new BiomeGenMoon(30)).setColor(16421912).setBiomeName("Moon").setDisableRain().setTemperatureRainfall(2.0F, 0.0F).setMinMaxHeight(0.1F, 0.2F);
    		public static EnumArmorMaterial EnumArmorMaterialSpace = EnumHelper.addArmorMaterial("Space Armor", 35, new int[] {4,9,7,6}, 15);
@@ -91,6 +93,7 @@ public class Cityscape {
     	    SpaceModBlock.init();
     	    
     		space.load();
+    		moon.load();
         }
         
         @Init

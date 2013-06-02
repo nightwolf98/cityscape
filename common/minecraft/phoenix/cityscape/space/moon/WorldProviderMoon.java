@@ -1,7 +1,6 @@
 package minecraft.phoenix.cityscape.space.moon;
 
 import minecraft.phoenix.cityscape.core.proxy.CommonProxy;
-import minecraft.phoenix.cityscape.core.lib.Reference;
 import minecraft.phoenix.cityscape.space.util.NullCloudRenderer;
 import minecraft.phoenix.cityscape.space.util.SkyRendererUtil;
 import net.minecraft.world.WorldProvider;
@@ -23,8 +22,8 @@ public class WorldProviderMoon extends WorldProvider{
 	
 	public void registerWorldChunkManager()	{
 		
-		this.worldChunkMgr = new WorldChunkManagerHell(CommonProxy.moonBiome, 0.8F, 0.1F);
-		this.dimensionId = Reference.moonID;
+		this.worldChunkMgr = new WorldChunkManagerHell(Moon.moonBiome, 0.8F, 0.1F);
+		this.dimensionId = Moon.moon;
 		this.setCloudRenderer(new NullCloudRenderer());
 		this.setSkyRenderer(new SkyRendererUtil(0));
 	}

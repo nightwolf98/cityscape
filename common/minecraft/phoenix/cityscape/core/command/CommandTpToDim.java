@@ -57,8 +57,6 @@ public class CommandTpToDim extends CommandBase{
    		
    		dimName = dimName.trim();
    		
-   		par1ICommandSender.sendChatToPlayer("." + dimName + "."); //Telling player
-   		
    		//Starting to send player to dimension
 		HashMap<String, Integer> dims = new HashMap<String, Integer>();
 		
