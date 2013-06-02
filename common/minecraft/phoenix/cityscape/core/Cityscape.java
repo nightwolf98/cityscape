@@ -1,22 +1,17 @@
 package minecraft.phoenix.cityscape.core;
 
 import java.io.File;
-
 import minecraft.phoenix.cityscape.core.block.CoreModBlock;
-import minecraft.phoenix.cityscape.core.creativeTabs.TabCityscape;
-import minecraft.phoenix.cityscape.core.creativeTabs.TabSpace;
 import minecraft.phoenix.cityscape.core.handler.ConfigurationHandler;
 import minecraft.phoenix.cityscape.core.handler.CustomCommandHandler;
 import minecraft.phoenix.cityscape.core.handler.LocalizationHandler;
 import minecraft.phoenix.cityscape.core.item.CoreModItem;
 import minecraft.phoenix.cityscape.core.lib.Reference;
-import minecraft.phoenix.cityscape.core.lib.Strings;
 import minecraft.phoenix.cityscape.core.proxy.CommonProxy;
 import minecraft.phoenix.cityscape.space.block.SpaceModBlock;
 import minecraft.phoenix.cityscape.space.item.SpaceModItem;
 import minecraft.phoenix.cityscape.space.moon.BiomeGenMoon;
 import minecraft.phoenix.cityscape.space.world.Space;
-import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.EnumHelper;
@@ -72,7 +67,8 @@ public class Cityscape {
    		public static EnumArmorMaterial EnumArmorMaterialSpace = EnumHelper.addArmorMaterial("Space Armor", 35, new int[] {4,9,7,6}, 15);
    	 
         @PreInit
-        public void preInit(FMLPreInitializationEvent event) {
+        public void preInit(FMLPreInitializationEvent event)
+        {
         	 //Loading language files
     		LocalizationHandler.loadLanguages();
     		
@@ -100,7 +96,7 @@ public class Cityscape {
         @Init
         public void load(FMLInitializationEvent event)
         {
-             
+        	
         }
         
         @PostInit
