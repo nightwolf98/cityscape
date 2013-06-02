@@ -1,6 +1,9 @@
-package minecraft.phoenix.cityscape.space.creativeTabs;
+package minecraft.phoenix.cityscape.core.creativeTabs;
 
+import minecraft.phoenix.cityscape.space.block.SpaceModBlock;
 import net.minecraft.creativetab.CreativeTabs;
+import cpw.mods.fml.relauncher.Side;
+import cpw.mods.fml.relauncher.SideOnly;
 
 /**
  * 21 Century Mod
@@ -19,4 +22,12 @@ public class TabSpace extends CreativeTabs{
 		
 		super(position, tabId);
 	}
+	
+	@SideOnly(Side.CLIENT)
+	public int getTabIconItemIndex()
+	{
+		
+		return SpaceModBlock.moonrock.blockID;
+	}
+	
 }

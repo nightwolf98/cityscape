@@ -17,7 +17,7 @@ import net.minecraftforge.common.DimensionManager;
 public class Reference {
 	
 	//All references used in the mod
-	public static final String modid 			= "CityScape";
+	public static final String modid 			= "Cityscape";
 	public static final String name 				= "21st Century Mod";
 	public static final String version 			= "0.1a";
 	public static final String ClientProxy		= "minecraft.phoenix.cityscape.core.proxy.ClientProxy";

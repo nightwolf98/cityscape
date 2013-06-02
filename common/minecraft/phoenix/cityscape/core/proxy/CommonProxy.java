@@ -1,9 +1,9 @@
 package minecraft.phoenix.cityscape.core.proxy;
 
 import minecraft.phoenix.cityscape.core.creativeTabs.TabCityscape;
+import minecraft.phoenix.cityscape.core.creativeTabs.TabSpace;
 import minecraft.phoenix.cityscape.core.lib.Reference;
 import minecraft.phoenix.cityscape.core.lib.Strings;
-import minecraft.phoenix.cityscape.space.creativeTabs.TabSpace;
 import minecraft.phoenix.cityscape.space.entity.EntityPlayerSpace;
 import minecraft.phoenix.cityscape.space.moon.WorldProviderMoon;
 import net.minecraft.creativetab.CreativeTabs;
