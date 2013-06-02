@@ -12,6 +12,7 @@ import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.Ev
 import static net.minecraftforge.event.terraingen.PopulateChunkEvent.Populate.EventType.LAVA;
 import java.util.List;
 import java.util.Random;
+import minecraft.phoenix.cityscape.space.block.SpaceModBlock;
 import net.minecraft.block.Block;
 import net.minecraft.block.BlockSand;
 import net.minecraft.entity.EnumCreatureType;
@@ -111,15 +112,6 @@ public class ChunkProviderMoon implements IChunkProvider
     float[] parabolicField;
     int[][] field_73219_j = new int[32][32];
 
-    {
-        caveGenerator = TerrainGen.getModdedMapGen(caveGenerator, CAVE);
-        strongholdGenerator = (MapGenStronghold) TerrainGen.getModdedMapGen(strongholdGenerator, STRONGHOLD);
-        villageGenerator = (MapGenVillage) TerrainGen.getModdedMapGen(villageGenerator, VILLAGE);
-        mineshaftGenerator = (MapGenMineshaft) TerrainGen.getModdedMapGen(mineshaftGenerator, MINESHAFT);
-        scatteredFeatureGenerator = (MapGenScatteredFeature) TerrainGen.getModdedMapGen(scatteredFeatureGenerator, SCATTERED_FEATURE);
-        ravineGenerator = TerrainGen.getModdedMapGen(ravineGenerator, RAVINE);
-    }
-
     public ChunkProviderMoon(World par1World, long par2, boolean par4)
     {
         this.worldObj = par1World;
@@ -152,7 +144,6 @@ public class ChunkProviderMoon implements IChunkProvider
     {
         byte b0 = 4;
         byte b1 = 16;
-        byte b2 = 63;
         int k = b0 + 1;
         byte b3 = 17;
         int l = b0 + 1;
@@ -196,7 +187,7 @@ public class ChunkProviderMoon implements IChunkProvider
                             {
                                 if ((d16 += d15) > 0.0D)
                                 {
-                                    par3ArrayOfByte[j2 += short1] = (byte)Block.stone.blockID;
+                                    par3ArrayOfByte[j2 += short1] = (byte)SpaceModBlock.moonrock.blockID;
                                 }
                                 else
                                 {
@@ -236,7 +227,6 @@ public class ChunkProviderMoon implements IChunkProvider
             for (int l = 0; l < 16; ++l)
             {
                 BiomeGenBase biomegenbase = par4ArrayOfBiomeGenBase[l + k * 16];
-                float f = biomegenbase.getFloatTemperature();
                 int i1 = (int)(this.stoneNoise[k + l * 16] / 3.0D + 3.0D + this.rand.nextDouble() * 0.25D);
                 int j1 = -1;
                 byte b1 = biomegenbase.topBlock;
@@ -327,7 +317,7 @@ public class ChunkProviderMoon implements IChunkProvider
      * size.
      */
     private double[] initializeNoiseField(double[] par1ArrayOfDouble, int par2, int par3, int par4, int par5, int par6, int par7)
-    {
+    {   	
         ChunkProviderEvent.InitNoiseField event = new ChunkProviderEvent.InitNoiseField(this, par1ArrayOfDouble, par2, par3, par4, par5, par6, par7);
         MinecraftForge.EVENT_BUS.post(event);
         if (event.getResult() == Result.DENY) return event.noisefield;
@@ -378,7 +368,8 @@ public class ChunkProviderMoon implements IChunkProvider
                     for (int j3 = -b0; j3 <= b0; ++j3)
                     {
                         BiomeGenBase biomegenbase1 = this.biomesForGeneration[k2 + i3 + 2 + (l2 + j3 + 2) * (par5 + 5)];
-                        float f4 = this.parabolicField[i3 + 2 + (j3 + 2) * 5];
+                        
+                        float f4 = this.parabolicField[i3 + 2 + (j3 + 2) * 5] / (biomegenbase1.minHeight + 2.0F);
 
                         if (biomegenbase1.minHeight > biomegenbase.minHeight)
                         {
@@ -490,48 +481,8 @@ public class ChunkProviderMoon implements IChunkProvider
      */
     public void populate(IChunkProvider par1IChunkProvider, int par2, int par3)
     {
-        BlockSand.fallInstantly = true;
-        int k = par2 * 16;
-        int l = par3 * 16;
-        BiomeGenBase biomegenbase = this.worldObj.getBiomeGenForCoords(k + 16, l + 16);
-        this.rand.setSeed(this.worldObj.getSeed());
-        long i1 = this.rand.nextLong() / 2L * 2L + 1L;
-        long j1 = this.rand.nextLong() / 2L * 2L + 1L;
-        this.rand.setSeed((long)par2 * i1 + (long)par3 * j1 ^ this.worldObj.getSeed());
-        boolean flag = false;
-
-        MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Pre(par1IChunkProvider, worldObj, rand, par2, par3, flag));
-
-        int k1;
-        int l1;
-        int i2;
-
-        if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAKE) && 
-                !flag && this.rand.nextInt(4) == 0)
-        {
-            k1 = k + this.rand.nextInt(16) + 8;
-            l1 = this.rand.nextInt(128);
-            i2 = l + this.rand.nextInt(16) + 8;
-            (new WorldGenLakes(Block.waterStill.blockID)).generate(this.worldObj, this.rand, k1, l1, i2);
-        }
-
-        if (TerrainGen.populate(par1IChunkProvider, worldObj, rand, par2, par3, flag, LAVA) &&
-                !flag && this.rand.nextInt(8) == 0)
-        {
-            k1 = k + this.rand.nextInt(16) + 8;
-            l1 = this.rand.nextInt(this.rand.nextInt(120) + 8);
-            i2 = l + this.rand.nextInt(16) + 8;
-
-        }
-
-        biomegenbase.decorate(this.worldObj, this.rand, k, l);
-        SpawnerAnimals.performWorldGenSpawning(this.worldObj, biomegenbase, k + 8, l + 8, 16, 16, this.rand);
-        k += 8;
-        l += 8;
-
-        MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Post(par1IChunkProvider, worldObj, rand, par2, par3, flag));
-
-        BlockSand.fallInstantly = false;
+        MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Pre(par1IChunkProvider, worldObj, rand, par2, par3, false));
+        MinecraftForge.EVENT_BUS.post(new PopulateChunkEvent.Post(par1IChunkProvider, worldObj, rand, par2, par3, false));
     }
 
     /**

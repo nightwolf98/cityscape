@@ -18,7 +18,7 @@ import cpw.mods.fml.common.registry.GameRegistry;
 public class Moon
 {
 	public static int moon;
-    public static final BiomeGenBase moonBiome = (new BiomeGenMoon(32)).setColor(0).setBiomeName("Moon").setDisableRain().setMinMaxHeight(-0.1F, 1.0F).setTemperatureRainfall(0.0F, 0.0F);
+    public static final BiomeGenBase moonBiome = (new BiomeGenMoon(32)).setColor(0).setBiomeName("Moon").setDisableRain().setMinMaxHeight(-0.1F, 0.1F).setTemperatureRainfall(0.0F, 0.0F);
     
     public void load(){
         
