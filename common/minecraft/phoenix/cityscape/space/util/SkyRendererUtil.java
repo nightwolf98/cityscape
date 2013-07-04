@@ -1,18 +1,16 @@
 package minecraft.phoenix.cityscape.space.util;
 
 import java.util.Random;
-
 import net.minecraft.client.Minecraft;
 import net.minecraft.client.multiplayer.WorldClient;
 import net.minecraft.client.renderer.GLAllocation;
 import net.minecraft.client.renderer.RenderHelper;
 import net.minecraft.client.renderer.Tessellator;
 import net.minecraftforge.client.IRenderHandler;
-
-import org.lwjgl.opengl.GL11;
-
 import cpw.mods.fml.relauncher.Side;
 import cpw.mods.fml.relauncher.SideOnly;
+
+import org.lwjgl.opengl.GL11;
 
 /**
  * 21 Century Mod

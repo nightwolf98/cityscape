@@ -43,7 +43,7 @@ public class Asphalt extends Block
 		 icons = new Icon[9];
 	            
 		 for(int i = 0; i < icons.length; i++){
-	                    icons[i] = par1IconRegister.registerIcon(Reference.modid + ":" + (this.getUnlocalizedName2()) + i);
+	                    icons[i] = par1IconRegister.registerIcon(Reference.modid + ":" + (this.getUnlocalizedName().substring(5)) + i);
 	             }
 	    }
 	

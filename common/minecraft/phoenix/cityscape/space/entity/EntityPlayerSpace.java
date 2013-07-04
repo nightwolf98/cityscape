@@ -1,15 +1,14 @@
 package minecraft.phoenix.cityscape.space.entity;
 
 import java.util.List;
-
+import api.player.client.ClientPlayerAPI;
+import api.player.client.ClientPlayerBase;
 import minecraft.phoenix.cityscape.space.item.SpaceModItem;
 import minecraft.phoenix.cityscape.space.world.Space;
 import net.minecraft.client.gui.GuiScreen;
 import net.minecraft.entity.Entity;
 import net.minecraft.item.ItemStack;
 import net.minecraft.potion.Potion;
-import net.minecraft.src.PlayerAPI;
-import net.minecraft.src.PlayerBase;
 import net.minecraft.stats.AchievementList;
 import net.minecraft.util.MathHelper;
 import net.minecraft.util.Vec3;
@@ -26,13 +25,13 @@ import net.minecraft.util.Vec3;
  *
  */
 
-public class EntityPlayerSpace extends PlayerBase{
+public class EntityPlayerSpace extends ClientPlayerBase {
 	
 	boolean once = true;
 	public int moonAir, maxAir;
 	private Vec3 portalPos;
 
-	public EntityPlayerSpace(PlayerAPI playerAPI){
+	public EntityPlayerSpace(ClientPlayerAPI playerAPI){
 		
 		super(playerAPI);
 		maxAir = moonAir = 100;

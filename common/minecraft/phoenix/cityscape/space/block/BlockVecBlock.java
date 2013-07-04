@@ -3,8 +3,8 @@ package minecraft.phoenix.cityscape.space.block;
 import minecraft.phoenix.cityscape.core.lib.Strings;
 import net.minecraft.block.Block;
 import net.minecraft.block.material.Material;
+import net.minecraft.util.Vec3;
 import net.minecraft.world.World;
-import paulscode.sound.Vector3D;
 
 /**
  * 21 Century Mod
@@ -20,7 +20,7 @@ import paulscode.sound.Vector3D;
 public class BlockVecBlock extends Block{
 	
 	//Initizalizing a 3D vector
-	private Vector3D vector;
+	private Vec3 vector;
 	
 	public BlockVecBlock(int id, Material material){
 		
@@ -38,7 +38,7 @@ public class BlockVecBlock extends Block{
 	public void onBlockAdded(World world, int x, int y, int z)	{
 		
 		super.onBlockAdded(world, x, y, z);
-		setVector(new Vector3D());
+		setVector(Vec3.createVectorHelper(0.0D, 0.0D, 0.0D));
 	}
 	
 	/**
@@ -46,7 +46,7 @@ public class BlockVecBlock extends Block{
 	 * 
 	 * @return vector
 	 */
-	public Vector3D getVector(){
+	public Vec3 getVector(){
 		
 		return vector;
 	}
@@ -57,7 +57,7 @@ public class BlockVecBlock extends Block{
 	 * @param vector
 	 * 			Vector to be set
 	 */
-	public void setVector(Vector3D vector){
+	public void setVector(Vec3 vector){
 		
 		this.vector = vector;
 	}
