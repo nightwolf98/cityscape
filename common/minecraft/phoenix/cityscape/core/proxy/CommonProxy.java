@@ -2,17 +2,12 @@ package minecraft.phoenix.cityscape.core.proxy;
 
 import minecraft.phoenix.cityscape.core.creativeTabs.TabCityscape;
 import minecraft.phoenix.cityscape.core.creativeTabs.TabSpace;
-import minecraft.phoenix.cityscape.core.lib.Reference;
 import minecraft.phoenix.cityscape.core.lib.Strings;
-import minecraft.phoenix.cityscape.space.entity.EntityPlayerSpace;
-import minecraft.phoenix.cityscape.space.moon.WorldProviderMoon;
 import net.minecraft.creativetab.CreativeTabs;
 import net.minecraft.item.EnumArmorMaterial;
-//import net.minecraft.src.PlayerAPI;
-import net.minecraft.world.biome.BiomeGenBase;
-import net.minecraftforge.common.DimensionManager;
 import net.minecraftforge.common.EnumHelper;
-import cpw.mods.fml.common.registry.GameRegistry;
+//import minecraft.phoenix.cityscape.space.entity.EntityPlayerSpace;
+//import net.minecraft.src.PlayerAPI;
 
 /**
  * 21 Century Mod

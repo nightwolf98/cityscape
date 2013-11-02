@@ -3,7 +3,6 @@ package minecraft.phoenix.cityscape.core.command;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
-
 import minecraft.phoenix.cityscape.space.util.NoPortalTeleporter;
 import net.minecraft.command.CommandBase;
 import net.minecraft.command.ICommandSender;
@@ -83,6 +82,7 @@ public class CommandTpToDim extends CommandBase{
        	else throw new WrongUsageException(getCommandUsage(par1ICommandSender), new Object[0]);
 	}
 	
+	@SuppressWarnings("rawtypes")
 	@Override
 	public List addTabCompletionOptions(ICommandSender icommandsender, String[] astring)
 	{

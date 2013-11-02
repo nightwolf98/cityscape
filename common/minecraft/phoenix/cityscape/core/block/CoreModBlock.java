@@ -39,7 +39,6 @@ public class CoreModBlock {
      * Adding all blocks to the game
      * 
      */
-    
 	public static void init()
 	{
 		asphalt = new Asphalt(BlockIds.BlockID_Asphalt, Material.ground).setUnlocalizedName(Strings.BLOCK_ASPHALT);

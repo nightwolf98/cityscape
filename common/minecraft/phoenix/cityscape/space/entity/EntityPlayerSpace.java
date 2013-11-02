@@ -1,4 +1,4 @@
-package minecraft.phoenix.cityscape.space.entity;
+/*package minecraft.phoenix.cityscape.space.entity;
 
 import minecraft.phoenix.cityscape.space.item.SpaceModItem;
 import minecraft.phoenix.cityscape.space.world.Space;
@@ -9,7 +9,7 @@ import net.minecraft.stats.AchievementList;
 import api.player.client.ClientPlayerAPI;
 import api.player.client.ClientPlayerBase;
 
-/**
+*//**
  * 21 Century Mod
  * 
  * EntityPlayerSpace
@@ -19,7 +19,7 @@ import api.player.client.ClientPlayerBase;
  * @author Martijn
  * @author jack9515
  *
- */
+ *//*
 
 public class EntityPlayerSpace extends ClientPlayerBase {
 	
@@ -266,4 +266,4 @@ public class EntityPlayerSpace extends ClientPlayerBase {
 			
 		
 	}
-}
+}*/

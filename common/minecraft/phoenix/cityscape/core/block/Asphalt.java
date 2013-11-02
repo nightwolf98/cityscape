@@ -53,6 +53,7 @@ public class Asphalt extends Block
           return icons[par2];
     }
 	
+	@SuppressWarnings({ "unchecked", "rawtypes" })
 	@SideOnly(Side.CLIENT)
     public void getSubBlocks(int par1, CreativeTabs par2CreativeTabs, List par3List)
     {

@@ -17,11 +17,8 @@ import net.minecraft.item.EnumArmorMaterial;
 import net.minecraft.world.biome.BiomeGenBase;
 import net.minecraftforge.common.EnumHelper;
 import cpw.mods.fml.common.Mod;
-import cpw.mods.fml.common.Mod.Init;
+import cpw.mods.fml.common.Mod.EventHandler;
 import cpw.mods.fml.common.Mod.Instance;
-import cpw.mods.fml.common.Mod.PostInit;
-import cpw.mods.fml.common.Mod.PreInit;
-import cpw.mods.fml.common.Mod.ServerStarting;
 import cpw.mods.fml.common.SidedProxy;
 import cpw.mods.fml.common.event.FMLInitializationEvent;
 import cpw.mods.fml.common.event.FMLPostInitializationEvent;
@@ -34,7 +31,6 @@ import cpw.mods.fml.common.network.NetworkMod;
  * 
  * CityScape
  * 
- * @licence Lesser GNU Public License v3 (http://www.gnu.org/licenses/lgpl.html)
  * @author nightwolf98
  * @author Martijn
  * @author jack9515
@@ -68,7 +64,7 @@ public class Cityscape {
    		public static BiomeGenBase moonBiome = (new BiomeGenMoon(30)).setColor(16421912).setBiomeName("Moon").setDisableRain().setTemperatureRainfall(2.0F, 0.0F).setMinMaxHeight(0.1F, 0.2F);
    		public static EnumArmorMaterial EnumArmorMaterialSpace = EnumHelper.addArmorMaterial("Space Armor", 35, new int[] {4,9,7,6}, 15);
    	 
-        @PreInit
+   		@EventHandler
         public void preInit(FMLPreInitializationEvent event)
         {
         	 //Loading language files
@@ -96,18 +92,18 @@ public class Cityscape {
     		moon.load();
         }
         
-        @Init
+   		@EventHandler
         public void load(FMLInitializationEvent event)
         {
         	
         }
         
-        @PostInit
+   		@EventHandler
         public void postInit(FMLPostInitializationEvent event) {
 
         }
         
-    	@ServerStarting
+   		@EventHandler
     	public void serverStarting(FMLServerStartingEvent event)
     	{
     		CustomCommandHandler.init(event);
